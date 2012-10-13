@@ -14,9 +14,8 @@ group :development do
   gem 'hirb'
 end
 
-group :development, :test do
+group :test do
   gem 'rspec-rails'
-  gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'capybara-webkit'
 end

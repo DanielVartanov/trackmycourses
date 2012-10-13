@@ -21,6 +21,3 @@ test: &test
 production:
   adapter: postgresql
   database: track_my_courses
-
-cucumber:
-  <<: *test

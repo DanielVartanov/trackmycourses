@@ -12,8 +12,6 @@ grabber.submit(form)
 
 grabber.get '/dashboard'
 
-# grabber.page.search("article.my-course > a").first
-# courses
 courses = grabber.page.search("article.my-course > a").map {|course| {url: course.attr('href'), title: course.css('h3').text} }
 
 courses.each do |course_info|
@@ -42,7 +40,6 @@ courses.each do |course_info|
         begin
           section.due_date = DateTime.parse section_due_date_string if section_due_date_string
         rescue ArgumentError
-          p "DateTime parse: #{section_due_date_string}"
         end
         section.save
       end
