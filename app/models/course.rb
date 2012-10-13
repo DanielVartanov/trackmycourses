@@ -3,6 +3,8 @@ class Course < ActiveRecord::Base
 
   belongs_to :platform
 
+  scope :started, -> { where "start_date <= ?", Date.today }
+
   def as_json(options={})
     super :include => :platform
   end
