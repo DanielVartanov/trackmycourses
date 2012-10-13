@@ -44,7 +44,6 @@ group :production do
 end
 
 group :development do
-  # To use debugger
   gem 'debugger'
   # Deploy with Capistrano
   gem 'capistrano'

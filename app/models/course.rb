@@ -6,6 +6,10 @@ class Course < ActiveRecord::Base
 
   scope :started, -> { where "start_date <= ?", Date.today }
 
+  def started?
+    Date.today >= start_date
+  end
+
   def as_json(options={})
     super :include => :platform
   end
