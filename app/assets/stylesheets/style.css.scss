@@ -1,0 +1,44 @@
+header {
+  min-height: 200px;
+  border-bottom: 1px solid black;
+}
+.main {
+  margin-top: 20px;
+}
+.course-list {
+  article{
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+}
+.my-courses {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  .header {
+    height: 50px;
+    h2 {
+      margin: 0;
+      float: left;
+      font-size: 1.6em;
+    } 
+    .button{
+      float: right;
+    }
+  }
+
+  #selected_courses {
+    article {
+      margin-bottom: 10px;
+      height: 80px;
+      border: 1px solid black;
+      border-radius: 5px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      h1 {
+        font-size: 1.2em;
+      }
+    }
+  }
+}

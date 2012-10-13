@@ -24,6 +24,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= yield %>
+	<%= render 'shared/header' %>
+	<div class="row">
+		<div class="twelve columns main">
+			<%= yield %>
+		</div>
+	</div>  
 </body>
 </html>
