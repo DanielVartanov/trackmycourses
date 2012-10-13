@@ -20,7 +20,6 @@ header {
   }
   q {
     float: right;
-    // margin-right: 20px;
     position: relative;
     width: 240px;
     display: inline-block;
@@ -74,7 +73,7 @@ footer {
     float: left;
     color: #7f7f7f;
     .octopus {
-      display: inline-block;
+      display: block;
       height: 23px;
       width: 91px;
       text-indent: -9999px;
