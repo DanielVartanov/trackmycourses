@@ -4,7 +4,7 @@ window.TrackMyCourses =
   Views: {}
   Routers: {}
   init: -> 
-    # alert 'Hello from Backbone!'
+    @courses = new @.Collections.Courses()
 
 $(document).ready ->
   TrackMyCourses.init()
