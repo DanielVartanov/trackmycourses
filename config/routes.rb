@@ -2,6 +2,7 @@ TrackMyCourses::Application.routes.draw do
   resources :dashboard, only: :index
   resources :users, only: :new
   resources :courses
+  resources :subscriptions
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
