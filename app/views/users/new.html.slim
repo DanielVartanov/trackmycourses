@@ -1,1 +1,22 @@
-h1 new user
+.row 
+  .eight.columns 
+    .row.collapse 
+      .eight.mobile-three.columns 
+        input type="text"
+      .four.mobile-one.columns 
+        a.postfix.button.expand href="#" Search
+    ul.block-grid.two-up.course-list
+      - 5.times do
+        li
+          article
+            h1 sample optional course
+
+  .four.columns
+    .my-courses
+      .header
+        h2 My courses
+        = link_to "track", dashboard_index_path, class: "button"
+      #selected_courses
+        - 5.times do
+          article
+            h1 sample selected course

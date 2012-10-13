@@ -3,6 +3,7 @@ Course.delete_all
 platform = Platform[:edx]
 
 grabber = Mechanize.new
+grabber.agent.http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 grabber.get platform.url
 grabber.page.link_with(:text => 'Find Courses').click
 courses = grabber.page.search('article.course')

@@ -18,7 +18,7 @@
 // $txtColor: #222;
 // $highlightColor: #ffff99;
 // $black: #000;
-// $white: #fff;
+$white: #fff;
 // $shinyEdge: rgba(#fff, .5);
 // $darkEdge: rgba(#000, .2);
 
@@ -74,4 +74,10 @@
 // $tapToCloseFontColor: #888;
 // $tooltipFontSizeScreenSmall: 14;
 // $tooltipBackgroundOpacityScreenSmall: 0.85;
+$progBarHeight: 25px !default;
+$progBarBorderColor: darken($white, 20%) !default;
+$progBarBorderSize: 1px !default;
+$progBarPad: 2px !default;
+
 @import 'foundation';
+@import 'progress_bar';
