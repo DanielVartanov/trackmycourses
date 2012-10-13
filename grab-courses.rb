@@ -12,6 +12,7 @@ courses.each do |course_xml|
   course.title = course_xml.css('h2').text
   course.logo_url = platform.url + course_xml.css('.cover-image > img').attr('src')
   course.description = course_xml.css('.desc').text.squish
+  course.start_date = Date.parse course_xml.css('.start-date').text
   course.save!
 end
 
