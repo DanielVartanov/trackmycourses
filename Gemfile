@@ -14,6 +14,13 @@ group :development do
   gem 'hirb'
 end
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+  gem 'capybara-webkit'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -44,7 +51,6 @@ group :production do
 end
 
 group :development do
-  # To use debugger
   gem 'debugger'
   # Deploy with Capistrano
   gem 'capistrano'
