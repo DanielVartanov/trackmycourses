@@ -1,5 +1,3 @@
-Course.delete_all
-
 platform = Platform[:edx]
 
 grabber = Mechanize.new
