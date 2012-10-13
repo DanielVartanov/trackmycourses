@@ -35,7 +35,8 @@ courses.each do |course_info|
         section.url = platform.url + section_xml.css('h3 > a').attr('href').value
         section.title = section_xml.css('h3 > a').text.squish
         exercise_count_matched = section_xml.css('h3 > span').text.match(/\/(\d+)/).to_a
-        section.exercise_count = exercise_count_matched[1] if exercise_count_matched.any?
+        section.score_count = exercise_count_matched[1] if exercise_count_matched.any?
+        section.exercise_count = section_xml.css('.scores > ol > li').count
         section_due_date_string = section_xml.css('p > em').text
         begin
           section.due_date = DateTime.parse section_due_date_string if section_due_date_string
