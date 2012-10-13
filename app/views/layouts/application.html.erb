@@ -25,11 +25,7 @@
 </head>
 <body>
 	<%= render 'shared/header' %>
-	<div class="row">
-		<div class="twelve columns main">
-			<%= yield %>
-		</div>
-	</div> 
+	<%= yield %>
 	<%= render 'shared/footer' %> 
 	<%- if Rails.env.production? %>
 		<script type="text/javascript">
