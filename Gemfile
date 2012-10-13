@@ -5,14 +5,23 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'thin'
-gem 'pg'
-
 group :development do
   gem 'mechanize'
   gem 'nokogiri-pretty'
   gem 'hirb'
-gem 'sqlite3'
+  gem 'sqlite3'
+  gem 'debugger'
+  # Deploy with Capistrano
+  gem 'capistrano'
+  gem 'rvm-capistrano'
+  gem 'capistrano-unicorn'
+  gem 'thin'
+end
+
+group :production do
+  # Use unicorn as the app server
+  gem 'unicorn'
+  gem 'pg'
 end
 
 group :test do
@@ -45,15 +54,4 @@ gem 'slim'
 # To use Jbuilder templates for JSON
 gem 'jbuilder'
 
-group :production do
-  # Use unicorn as the app server
-  gem 'unicorn'
-end
 
-group :development do
-  gem 'debugger'
-  # Deploy with Capistrano
-  gem 'capistrano'
-  gem 'rvm-capistrano'
-  gem 'capistrano-unicorn'
-end
