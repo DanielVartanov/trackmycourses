@@ -34,9 +34,15 @@ namespace :deploy do
   task :remove_rvmrc, roles: :app do
     run "[ -f #{current_path}/.rvmrc ] && rm #{current_path}/.rvmrc; true"
   end
+
+  desc "Update configuration files"
+  task :update_configuration_files, roles: :app do
+    run "[ -f #{shared_path}/config/platforms.yml ] && cp #{shared_path}/config/platforms.yml #{current_path}/config/; true"
+  end
 end
 
 after 'deploy:update_code', 'deploy:remove_rvmrc'
+after 'deploy:update_code', 'deploy:update_configuration_files'
 # after "deploy:restart", "resque:restart"
 
 after 'deploy', 'deploy:cleanup'
