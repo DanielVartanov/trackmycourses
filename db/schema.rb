@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121013052220) do
+ActiveRecord::Schema.define(:version => 20121013100357) do
+
+  create_table "accounts", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "chapters", :force => true do |t|
+    t.string   "title"
+    t.integer  "course_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "courses", :force => true do |t|
     t.integer  "platform_id"
@@ -28,6 +40,23 @@ ActiveRecord::Schema.define(:version => 20121013052220) do
     t.string   "url"
     t.string   "name"
     t.string   "logo_url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "sections", :force => true do |t|
+    t.integer  "chapter_id"
+    t.string   "title"
+    t.integer  "exercise_count"
+    t.datetime "due_date"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.string   "url"
+  end
+
+  create_table "subscriptions", :force => true do |t|
+    t.integer  "course_id"
+    t.integer  "account_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
