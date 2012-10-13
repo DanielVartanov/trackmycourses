@@ -29,6 +29,7 @@ group :assets do
   gem 'zurb-foundation', '~> 3.1.1'
 end
 
+gem 'backbone-on-rails'
 gem 'jquery-rails'
 gem 'slim'
 
