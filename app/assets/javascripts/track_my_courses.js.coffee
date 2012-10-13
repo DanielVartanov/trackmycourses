@@ -3,8 +3,10 @@ window.TrackMyCourses =
   Collections: {}
   Views: {}
   Routers: {}
-  init: -> 
+  init: ->
     @courses = new @.Collections.Courses()
+    @subscription = new @.Models.Subscription(course_ids: [1,2,3])
+
     $("#slider").orbit
       animation: 'horizontal-push',
       animationSpeed: 800,
