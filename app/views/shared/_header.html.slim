@@ -1,12 +1,9 @@
 header.row
-  .tvelwe.columns
-    h1: a href="#{root_path}"
-      em Track 
-      | My Courses
-
-    h2 
-      | May the 
+  .eight.columns
+    h1 = link_to "TrackMyCourses", root_path, id: "logo"
+  .four.columns
+    q 
+      | ...may the 
       em course 
-      | be with you, padawan
+      span.right be with you
 
-    = link_to "Register", new_user_path, class: "button"
