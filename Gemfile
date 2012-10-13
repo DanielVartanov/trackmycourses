@@ -10,6 +10,8 @@ gem 'thin'
 
 group :development do
   gem 'mechanize'
+  gem 'nokogiri-pretty'
+  gem 'hirb'
 end
 
 # Gems used only for assets and not required
