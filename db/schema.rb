@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121013093605) do
+ActiveRecord::Schema.define(:version => 20121013094914) do
 
   create_table "chapters", :force => true do |t|
     t.string   "title"
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(:version => 20121013093605) do
     t.integer  "chapter_id"
     t.string   "title"
     t.integer  "exercise_count"
-    t.date     "due_date"
+    t.datetime "due_date"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
     t.string   "url"
