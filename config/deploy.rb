@@ -37,7 +37,7 @@ namespace :deploy do
 end
 
 after 'deploy:update_code', 'deploy:remove_rvmrc'
-after "deploy:restart", "resque:restart"
+# after "deploy:restart", "resque:restart"
 
 after 'deploy', 'deploy:cleanup'
 after "deploy", "unicorn:stop_old"
