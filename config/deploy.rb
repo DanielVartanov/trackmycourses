@@ -1,19 +1,48 @@
-set :application, "set your application name here"
-set :repository,  "set your repository location here"
+require 'bundler/capistrano'
+require 'rvm/capistrano'
+#require "capistrano-resque"
 
-set :scm, :subversion
-# Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
+# load 'config/recipes/base'
+# load 'config/recipes/nginx'
+# load 'config/recipes/unicorn'
+# load 'config/recipes/check'
 
-role :web, "your web-server here"                          # Your HTTP server, Apache/etc
-role :app, "your app-server here"                          # This may be the same as your `Web` server
-role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
-role :db,  "your slave db-server here"
+set :scm, :git
+set :repository,  "git@github.com:railsrumble/r12-team-115.git"
+set :branch, 'master'
 
-# if you want to clean up old releases on each deploy uncomment this:
-# after "deploy:restart", "deploy:cleanup"
+server "coursetools.r12.railsrumble.com", :web, :app, :db, primary: true
 
-# if you're still using the script/reaper helper you will need
-# these http://github.com/rails/irs_process_scripts
+set :user, 'deploy'
+set :application, 'track-my-courses'
+
+set :nginx_domains, "coursetools.r12.railsrumble.com"
+
+set :deploy_to, "/home/#{user}/apps/#{application}"
+set :deploy_via, :remote_cache
+set :use_sudo, false
+
+set :rvm_ruby_string, "1.9.3@#{application.upcase}"
+
+# set :workers, { "email_sender" => 1 }
+
+default_run_options[:pty] = true
+ssh_options[:forward_agent] = true
+
+namespace :deploy do
+  desc "Remove .rvmrc after fetching from repo"
+  task :remove_rvmrc, roles: :app do
+    run "[ -f #{current_path}/.rvmrc ] && rm #{current_path}/.rvmrc; true"
+  end
+end
+
+after 'deploy:update_code', 'deploy:remove_rvmrc'
+after "deploy:restart", "resque:restart"
+
+after 'deploy', 'deploy:cleanup'
+after "deploy", "unicorn:stop_old"
+
+require "capistrano-unicorn"
 
 # If you are using Passenger mod_rails uncomment this:
 # namespace :deploy do
