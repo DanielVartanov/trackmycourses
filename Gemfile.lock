@@ -208,6 +208,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   compass-rails (~> 1.0.3)
   debugger
+  ejs (= 1.0.0)
   hirb
   jbuilder
   jquery-rails
