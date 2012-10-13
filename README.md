@@ -1,4 +1,4 @@
 Track my courses
 ===========
 
-An online tool for those who study several online courses at [coursera]:http://coursera.org and [edX]:http://edx.org 
+An online tool for those who study several online courses at http://coursera.org and http://edx.org 
