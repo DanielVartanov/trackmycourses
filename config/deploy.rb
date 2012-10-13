@@ -2,10 +2,10 @@ require 'bundler/capistrano'
 require 'rvm/capistrano'
 #require "capistrano-resque"
 
-# load 'config/recipes/base'
-# load 'config/recipes/nginx'
-# load 'config/recipes/unicorn'
-# load 'config/recipes/check'
+load 'config/recipes/base'
+load 'config/recipes/nginx'
+load 'config/recipes/unicorn'
+load 'config/recipes/check'
 
 set :scm, :git
 set :repository,  "git@github.com:railsrumble/r12-team-115.git"
