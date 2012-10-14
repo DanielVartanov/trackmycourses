@@ -1,4 +1,4 @@
-.subscription
+.dashboard
   .row 
     .twelve.columns
       h2 Dashboard
@@ -19,3 +19,20 @@
                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         .three.columns.sidebar
           = link_to "My subscriptions", account_subscriptions_path, class: "bigbutton"
+          .my-accounts
+            .header
+              h2 Accounts          
+            ul.accounts
+              li.github.connected
+                a href="#" Joseph Shekelman
+                a.remove href="#" remove
+              li.google
+                a href="#" Connect
+                a.remove href="#" remove
+              li.facebook
+                a href="#" Connect
+                a.remove href="#" remove
+              li.twitter
+                a href="#" Connect
+                a.remove href="#" remove
+              li Connect your network account to be able to save and manage your courses
