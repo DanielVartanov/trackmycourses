@@ -63,9 +63,14 @@
             .header
               h2 Accounts          
             ul.accounts
-              li.twitter.connected
-                a href="/auth/twitter" Joseph Shekelman
-                a.remove href="#" remove
+              li.twitter class="#{'connected' if controller.__send__ :logged_in?}"
+
+                - if controller.__send__ :logged_in?
+                  span = (controller.__send__ :current_user).twitter_username
+                  / a.remove href="#" remove
+                - else
+                  a href="/auth/twitter" Connect
+
               li.github
                 a.not-supported href="#" title="Sorry, not supported yet" Not supported yet
                 a.remove href="#" remove

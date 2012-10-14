@@ -667,7 +667,7 @@ div.orbit-wrapper {
             }
           }
         }
-        a {
+        a, span {
           opacity: 0.5;
           &:before {
             content: "";
@@ -685,7 +685,7 @@ div.orbit-wrapper {
           }
         }
         &.github {
-          a {
+          a, span {
             &:before {
               width: 51px;
               margin-bottom: -7px;
@@ -694,21 +694,21 @@ div.orbit-wrapper {
           }
         }
         &.facebook {
-          a {
+          a, span {
             &:before {
               background-position: -57px 0;
             }
           }
         }
         &.google {
-          a {
+          a, span {
             &:before {
               background-position: -89px 0;
             }
           }
         }
         &.twitter {
-          a {
+          a, span {
             &:before {
               background-position: -120px 0;
             }
