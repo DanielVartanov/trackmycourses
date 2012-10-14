@@ -63,7 +63,6 @@ namespace :grab do
           chapter.save
 
           section = chapter_xml.css('ol.sections > li').each do |section_xml|
-            # section = Section.new chapter: chapter
             section_url = platform.url + section_xml.css('h3 > a').attr('href').value
             section_title = section_xml.css('h3 > a').text.squish
             exercise_count_matched = section_xml.css('h3 > span').text.match(/\/(\d+)/).to_a
