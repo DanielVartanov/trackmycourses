@@ -3,6 +3,7 @@ TrackMyCourses::Application.routes.draw do
   resources :courses
 
   resource :account do
+    get :sign_out, on: :member
     resources :subscriptions
   end
 
