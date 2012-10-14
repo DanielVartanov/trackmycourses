@@ -1,6 +1,6 @@
 class DashboardController < ApplicationController
   def index
-    courses = Course.find session[:course_ids]
+    courses = user_courses
     chapters = courses.map { |course| course.chapter_at_week(params[:week].to_i)}
     chapters = chapters.compact
 
@@ -27,6 +27,19 @@ class DashboardController < ApplicationController
         }
       end
     end
-    
+  end
+
+  protected
+
+  def user_courses
+    if logged_in?
+      current_user.courses
+    else
+      if session[:course_ids] 
+        Course.find session[:course_ids]
+      else
+        []
+      end
+    end
   end
 end
