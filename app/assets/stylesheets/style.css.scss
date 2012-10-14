@@ -401,7 +401,8 @@ div.orbit-wrapper {
           background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
           background-image: linear-gradient(to bottom, #FFFFFF 0%, #D7D7D7 100%);
           z-index:1;
-          border: 1px solid #c5c5c5;
+          border: 1px solid white;
+          outline: 1px solid #c5c5c5;
         }
         &:before {
           content: "";
