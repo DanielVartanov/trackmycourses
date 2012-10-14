@@ -4,5 +4,6 @@ class TrackMyCourses.Views.SubscribedCourse extends Backbone.View
 
   render: ->
     @.$el.data 'view', @
+    @.$el.addClass @model.get('platform').name
     @.$el.html @template course: @model
     this
