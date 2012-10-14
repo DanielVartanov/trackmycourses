@@ -25,7 +25,7 @@ namespace :grab do
       puts "Course: #{course.title} #{course.url}"
       course.chapters.each do |chapter|
         chapter.lectures.each do |lecture|
-          sleep 0.5
+          sleep 1
           puts "  Lecture: #{lecture.title}"
           grabber.get lecture.url
 
