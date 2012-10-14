@@ -81,6 +81,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     fssm (0.2.9)
+    hashie (1.2.0)
     highline (1.6.15)
     hike (1.2.1)
     hirb (0.7.0)
@@ -126,6 +127,16 @@ GEM
     nokogiri-pretty (0.1.0)
       nokogiri
     ntlm-http (0.1.1)
+    oauth (0.4.7)
+    omniauth (1.1.1)
+      hashie (~> 1.2)
+      rack
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-twitter (0.0.13)
+      multi_json (~> 1.3)
+      omniauth-oauth (~> 1.0)
     pg (0.14.1)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -231,6 +242,7 @@ DEPENDENCIES
   jquery-rails
   mechanize
   nokogiri-pretty
+  omniauth-twitter
   pg
   rails (= 3.2.8)
   rspec-rails
