@@ -56,9 +56,10 @@ namespace :grab do
           continue
         end
 
-        grabber.page.search('ol.chapters > li').each do |chapter_xml|
+        grabber.page.search('ol.chapters > li').each_with_index do |chapter_xml, index|
           chapter = Chapter.new course: course
           chapter.title = chapter_xml.css('h2').text.squish
+          chapter.number = index + 1
           chapter.save
 
           section = chapter_xml.css('ol.sections > li').each do |section_xml|
