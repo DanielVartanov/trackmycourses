@@ -3,27 +3,15 @@ window.TrackMyCourses =
   Collections: {}
   Views: {}
   Routers: {}
-  init: ->
-    @courses = new @.Collections.Courses()
-    @subscription = new @.Models.Subscription(course_ids: [1,2,3])
 
-    $("#slider").orbit
-      animation: 'horizontal-push',
-      animationSpeed: 800,
-      timer: false,
-      resetTimerOnClick: false,
-      advanceSpeed: 4000,
-      pauseOnHover: true,
-      startClockOnMouseOut: true,
-      startClockOnMouseOutAfter: 1000,
-      directionalNav: true,
-      captions: true,
-      captionAnimation: 'fade',
-      captionAnimationSpeed: 800,
-      bullets: false,
-      bulletThumbs: false,
-      bulletThumbLocation: '',
-      fluid: true
+  init: ->
+    views = 
+      '/': TrackMyCourses.Views.HomePage
+      '/account/subscriptions': TrackMyCourses.Views.CompositionPage
+      '/dashboard': TrackMyCourses.Views.DashboardPage
+
+     viewClass = views[window.location.pathname]
+     @currentView = new viewClass()
 
 $(document).ready ->
   TrackMyCourses.init()
