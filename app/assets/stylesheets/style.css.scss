@@ -367,7 +367,12 @@ div.orbit-wrapper {
 
   #course-list {
     overflow: visible;
+    li {
+      margin-bottom: 30px;
+      padding-bottom: 0;
+    }
     article{
+      min-height: 250px;
       border: 1px solid #c5c5c5;
       box-shadow: 1px 1px 1px #c5c5c5;
       padding: 17px 15px;
@@ -433,7 +438,8 @@ div.orbit-wrapper {
         }
       }
       h1 {
-        font-size: 1em;
+        font-size: 1.2em;
+        font-weight: normal;
       }
       .illustration {
         height: 145px;
@@ -441,6 +447,33 @@ div.orbit-wrapper {
         background-position: center center;
         img{
           display: none;
+        }
+      }
+      .add {
+        position: absolute;
+        bottom: 2px;
+        right: 10px;
+        font-size: 1.4em;
+        color: #4e930e;
+        &:before{
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 60%;
+          background-image: -ms-linear-gradient(bottom, rgba(255,255,255,0) 0%, #FFFFFF 100%);
+          background-image: -moz-linear-gradient(bottom, rgba(255,255,255,0) 0%, #FFFFFF 100%);
+          background-image: -o-linear-gradient(bottom, rgba(255,255,255,0) 0%, #FFFFFF 100%);
+          background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(255,255,255,0)), color-stop(1, #FFFFFF));
+          background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, #FFFFFF 100%);
+          background-image: linear-gradient(to top, rgba(255,255,255,0) 0%, #FFFFFF 100%);
+        }
+        &:after{
+          content: "";
+          display: inline-block;
+          height: 19px;
+          width: 19px;
+          background: url("/images/add.png");
+          margin: 0 0 -3px 4px;
         }
       }
     }
