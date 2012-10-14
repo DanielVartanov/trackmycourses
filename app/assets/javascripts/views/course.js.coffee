@@ -3,5 +3,5 @@ class TrackMyCourses.Views.Course extends Backbone.View
   template: JST['course']
 
   render: ->
-    @.$el.html @template(@model)
+    @.$el.html @template({course: @model})
     this

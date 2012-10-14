@@ -7,5 +7,7 @@ class TrackMyCourses.Views.Courses extends Backbone.View
 
   collectionReset: (courses) ->
     @.$el.html ''
-    courses.each (course) ->
-      @.$el.append new TrackMyCourses.Views.Course(model: course).render().el
+    courses.each @addCourse
+
+  addCourse: (course) ->
+    @.$el.append new TrackMyCourses.Views.Course(model: course).render().el
