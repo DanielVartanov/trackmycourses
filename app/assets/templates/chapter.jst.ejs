@@ -7,7 +7,7 @@
         <% for(i=0; i < chapter.get('lectures').length; i++) { var section = chapter.get('lectures')[i]; %>
           <li> 
             <a target="_blank" href="<%= section['url'] %>"><%= section['title'] %></a>
-            <span class="info"> <% if (section['duration']) { %>(<%= Math.ceil(section['duration']/60) %> min)<% } %> Practicies: <%= section['practice_count'] %></span>
+            <span class="info"> <% if (section['duration']) { %>(<%= Math.ceil(section['duration']/60) %> min)<% } %> Practices: <%= section['practice_count'] %></span>
           </li>
         <% } %>
       </ul>
@@ -16,7 +16,7 @@
 
   <div class="six columns">
     <div class="assigments">
-      <h2>Assigments</h2>
+      <h2>Assignments</h2>
       <ul>
         <% for(i=0; i < chapter.get('assignments').length; i++) { var section = chapter.get('assignments')[i]; %>
           <li> 
