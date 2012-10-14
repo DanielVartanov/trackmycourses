@@ -208,7 +208,7 @@ GEM
       rack
       raindrops (~> 0.7)
     webrobots (0.0.13)
-    zurb-foundation (3.1.1)
+    zurb-foundation (3.0.9)
       compass (>= 0.12.2)
       modular-scale (>= 1.0.2)
       rake
@@ -242,4 +242,4 @@ DEPENDENCIES
   thin
   uglifier (>= 1.0.3)
   unicorn
-  zurb-foundation (~> 3.1.1)
+  zurb-foundation (~> 3.0.9)
