@@ -9,6 +9,7 @@ class TrackMyCourses.Views.DashboardPage extends Backbone.View
     @weekPickerView.render()
 
     @weekSummaryView = new TrackMyCourses.Views.WeekSummaryView()
+    @chaptersView = new TrackMyCourses.Views.ChaptersView()
 
     
     $("article h1").click ->
@@ -20,5 +21,5 @@ class TrackMyCourses.Views.DashboardPage extends Backbone.View
   weekFetched: (week) ->
     @weekSummaryView.render(week)
 
-    @weekCourses = new TrackMyCourses.Collections.Chapters(week.chapters)
-    
+    @chapters = new TrackMyCourses.Collections.Chapters(week.get('chapters'))
+    @chaptersView.render(@chapters)

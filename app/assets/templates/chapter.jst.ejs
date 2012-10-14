@@ -1,0 +1,23 @@
+<h1><%= chapter.get('title') %></h1>
+<div class="row">
+  <div class="six columns">
+    <div class="lectures">
+      <h2>Lectures</h2>
+      <ul>
+        <% for(i=0; i < chapter.get('lectures').length; i++) { var section = chapter.get('sections')[i]; %>
+          <li> 
+            <%= section['title'] %>
+            <span class="info"> (01:45) Practicies: 2</span>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+
+  <div class="six columns">
+    <div class="assigments">
+      <h2>Assigments</h2>
+      <ul>
+      </ul>
+  </div>
+</div>
