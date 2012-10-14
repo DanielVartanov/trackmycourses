@@ -1,6 +1,47 @@
 require 'spec_helper'
 
 describe AccountsController, :type => :controller do
+  describe '#sign_out' do
+    context 'when user is logged in' do
+      let(:circuits) { Course.create! }
+      let(:chemistry) { Course.create! }
+      let(:pharmacy) { Course.create! }
+
+      let(:current_user) { Account.create! }
+      let(:facebook_uid) { '643321084' }
+      let(:facebook_username) { 'daniel.vartanov' }
+
+      let(:subscribed_course_ids) { [circuits.id, chemistry.id, pharmacy.id] }
+
+      before do
+        current_user.authentications.create! :provider => 'facebook', :uid => facebook_uid, :nickname => facebook_username
+      end
+
+      context 'when user have session' do
+        before do
+          session[:user_id] = current_user.id
+          session[:course_ids] = subscribed_course_ids
+        end
+
+        it 'should clear session' do
+          get :sign_out
+
+          session[:user_id].should be_nil
+          session[:course_ids].should be_nil
+        end
+      end
+
+      context 'when user doesnt have session' do
+        it 'should not expose an error' do
+          get :sign_out
+
+          session[:user_id].should be_nil
+          session[:course_ids].should be_nil
+        end
+      end
+    end
+  end
+
   describe '#create' do
     context 'when user is new (user signs up)' do
       context 'given various courses' do

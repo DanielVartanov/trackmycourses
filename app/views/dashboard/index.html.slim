@@ -13,8 +13,8 @@
 
               .four.columns.current
                 a#current-week
-                  | This week
-                  span.date 08.10 - 14.10
+                  | Go to this week
+                span.date 08.10 - 14.10
 
               .four.columns.next
                 a#next-week
@@ -46,7 +46,7 @@
               h2 
                 | Accounts 
                 - if controller.__send__ :logged_in?    
-                  a.sign_out href="#" Sign out
+                  a.sign_out href="#{sign_out_account_url protocol: 'http'}" Sign out
             ul.accounts
               li.twitter class="#{'connected' if controller.__send__ :logged_in?}"
 

@@ -9,7 +9,7 @@ class TrackMyCourses.Views.WeekPickerView extends Backbone.View
     _.bindAll @
     @$prevWeek = @.$el.find('#prev-week span.date')
     @$nextWeek = @.$el.find('#next-week span.date')
-    @$currWeek = @.$el.find('#current-week span.date')
+    @$currWeek = @.$el.find('#current-week ').parent().find('span.date')
     @onChange = (week) ->
       console.log week
 

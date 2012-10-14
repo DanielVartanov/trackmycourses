@@ -1,5 +1,5 @@
 class AccountsController < ApplicationController
-  before_filter :find_account
+  before_filter :find_account, only: :create
 
   def create
     if logged_in?
@@ -14,6 +14,12 @@ class AccountsController < ApplicationController
       sign_in
     end
 
+    redirect_to root_url protocol: 'http'
+  end
+
+  def sign_out
+    session[:user_id] = nil
+    session[:course_ids] = nil
     redirect_to root_url protocol: 'http'
   end
 

@@ -1,10 +1,12 @@
 class TrackMyCourses.Views.CompositionPage extends Backbone.View
   el: '#composition-page'
   button: '#to_dashboard'
+  searchForm: '#search'
 
   events:
     'mouseenter #to_dashboard': 'toDashboardMouseEnter'
     'click #to_dashboard': 'toDashboardClicked'
+    'submit #search': 'searchSubmitted'
 
   initialize: ->
     _.bindAll @
@@ -43,3 +45,5 @@ class TrackMyCourses.Views.CompositionPage extends Backbone.View
     if @courses.subscribed().length is 0
       event.preventDefault()
 
+  searchSubmitted: (event)->
+    event.preventDefault()
