@@ -13,10 +13,10 @@ class TrackMyCourses.Views.WeekPickerView extends Backbone.View
     @onChange = (week) ->
       console.log week
 
-
     @week = Date.today().getWeek()
 
   render: ->
+    @onChange(@week)
     currWeekMondayDate = Date.monday().setWeek(@week)
     currWeekSundayDate = currWeekMondayDate.clone().sunday()
 
@@ -32,15 +32,12 @@ class TrackMyCourses.Views.WeekPickerView extends Backbone.View
 
   prevWeekClicked: ->
     @week -= 1
-    @onChange @week
     @render()
     
   nextWeekClicked: ->
     @week += 1
-    @onChange @week
     @render()
 
   currWeekClicked: ->
     @week = Date.today().getWeek() 
-    @onChange @week
     @render()

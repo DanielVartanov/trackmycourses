@@ -667,7 +667,7 @@ div.orbit-wrapper {
             }
           }
         }
-        a {
+        a, span {
           opacity: 0.5;
           &:before {
             content: "";
@@ -685,7 +685,7 @@ div.orbit-wrapper {
           }
         }
         &.github {
-          a {
+          a, span {
             &:before {
               width: 51px;
               margin-bottom: -7px;
@@ -694,21 +694,21 @@ div.orbit-wrapper {
           }
         }
         &.facebook {
-          a {
+          a, span {
             &:before {
               background-position: -57px 0;
             }
           }
         }
         &.google {
-          a {
+          a, span {
             &:before {
               background-position: -89px 0;
             }
           }
         }
         &.twitter {
-          a {
+          a, span {
             &:before {
               background-position: -120px 0;
             }
@@ -829,7 +829,7 @@ div.orbit-wrapper {
     }
     .lectures{
       h3{
-        margin-top: 44px;
+        margin-top: 55px;
       }
     }
     .assigments, .practicies {
@@ -838,13 +838,15 @@ div.orbit-wrapper {
       }
     }
   }
-  #cources {
+
+  #courses {
     article {
       border: 1px solid #c8c8c8;
       box-shadow: 1px 1px 1px #c8c8c8;
       margin-bottom: 22px;
       background: #f9f9f9;
       position: relative;
+
       &:after {
         content: "";
         position: absolute;
@@ -855,6 +857,7 @@ div.orbit-wrapper {
         background: url("/images/arrows.png") no-repeat 0 -14px;
         cursor: pointer;
       }
+
       &.collapsed {
         max-height: 43px;
         overflow: hidden;
