@@ -1,0 +1,22 @@
+---
+:2:
+  id: 2
+  platform_id: 1
+  title: 6.002x Circuits and Electronics
+  description: 6.002x teaches the fundamentals of circuit and electronic analysis.
+  url: https://edx.org/courses/MITx/6.002x/2012_Fall/about
+  logo_url: http://edx.org/static/content-mit-6002x/images/course_image.af4982623e2d.jpg
+  created_at: 2012-10-14 08:16:51.286293000 Z
+  updated_at: 2012-10-14 08:16:51.286293000 Z
+  start_date: 2012-09-05
+:6:
+  id: 6
+  platform_id: 1
+  title: CS169.1x Software as a Service
+  description: CS169.1x teaches the fundamentals for engineering long-lived software
+    using Agile techniques to develop Software as a Service (SaaS) using Ruby on Rails.
+  url: https://edx.org/courses/BerkeleyX/CS169.1x/2012_Fall/about
+  logo_url: http://edx.org/static/content-berkeley-cs169x~2012_Fall/images/course_image.f2f4830fb1f1.jpg
+  created_at: 2012-10-14 08:16:51.300736000 Z
+  updated_at: 2012-10-14 08:16:51.300736000 Z
+  start_date: 2012-09-21
