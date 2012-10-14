@@ -50,18 +50,24 @@
             ul.accounts
               li.twitter class="#{'connected' if controller.__send__ :logged_in?}"
 
-                - if (controller.__send__ :current_user).authenticated_with('twitter')?
-                  span = (controller.__send__ :current_user).authentications.find_by_provider('twitter').nickname
-                  / a.remove href="#" remove
+                - if controller.__send__ :logged_in? 
+                  - if (controller.__send__ :current_user).authenticated_with?('twitter')
+                    span = (controller.__send__ :current_user).authentications.find_by_provider('twitter').nickname
+                    / a.remove href="#" remove
+                  - else
+                    a href="/auth/twitter" title="Sign in with twitter" Connect
                 - else
-                  a href="/auth/twitter" title="Sign in with twitter" Connect
+                  a href="/auth/twitter" title="Sign in with twitter" Sign in with twitter
 
               li.facebook
-                - if (controller.__send__ :current_user).authenticated_with('facebook')?
-                  span = (controller.__send__ :current_user).authentications.find_by_provider('facebook').nickname
-                  / a.remove href="#" remove
+                - if controller.__send__ :logged_in?
+                  - if (controller.__send__ :current_user).authenticated_with?('facebook')
+                    span = (controller.__send__ :current_user).authentications.find_by_provider('facebook').nickname
+                    / a.remove href="#" remove
+                  - else
+                    a href="/auth/facebook" title="Sign in with facebook" Connect
                 - else
-                  a href="/auth/facebook" title="Sign in with facebook" Connect
+                  a href="/auth/facebook" title="Sign in with facebook" Sign in with facebook
                   
               li.github
                 a.not-supported href="#" title="Sorry, not supported yet" Not supported yet
