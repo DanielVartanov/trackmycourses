@@ -19,6 +19,7 @@ class TrackMyCourses.Views.CompositionPage extends Backbone.View
     @subscription.fetch(success: @subscriptionFetched)
 
   subscriptionFetched: (subscription) ->
+    @courses.setSubscription subscription
     @coursesView.render()
     @subscribedCoursesView.render()
     subscription.on 'change', @subscribtionChanged
