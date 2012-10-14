@@ -46,7 +46,7 @@ describe SubscriptionsController, :type => :controller do
           end
 
           it 'should return a plain list of course ids' do
-            response_json.should == [chemistry.id.to_s, pharmacy.id.to_s]
+            response_json.should == { 'course_ids' => [chemistry.id.to_s, pharmacy.id.to_s] }
           end
         end
       end
@@ -58,7 +58,7 @@ describe SubscriptionsController, :type => :controller do
           end
 
           it 'should return an empty array' do
-            response_json.should == []
+            response_json.should == { 'course_ids' => [] }
           end
         end
       end
