@@ -10,7 +10,7 @@ describe SubscriptionsController, :type => :controller do
       
       context 'anonymous user creates a subscrtipion' do
         before do
-          post :create, :subscription => { :course_ids => [circuits.id] }
+          post :create, :course_ids => [circuits.id]
         end
 
         it "should not create any models" do
@@ -24,7 +24,7 @@ describe SubscriptionsController, :type => :controller do
 
         context 'that user updates the subscription' do
           before do
-            post :create, :subscription => { :course_ids => [chemistry.id, pharmacy.id] }
+            post :create, :course_ids => [chemistry.id, pharmacy.id]
           end
 
           it "should update course list in the session" do
@@ -37,7 +37,7 @@ describe SubscriptionsController, :type => :controller do
     describe "#index" do
       context 'given anonymous user has created some subscriptions' do
         before do
-          post :create, :subscription => { :course_ids => [chemistry.id, pharmacy.id] }
+          post :create, :course_ids => [chemistry.id, pharmacy.id]
         end
 
         context 'when user gets a list of his subscriptions' do
