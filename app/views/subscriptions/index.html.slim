@@ -8,13 +8,13 @@
             input type="text" placeholder="Find your course..."
             input type="submit"
           ul.block-grid.two-up#course-list
-            - 5.times do
-              li
-                article.coursera
-                  .illustration style="background-image: url('http://placehold.it/350x240&text=course+logo')"
-                    img src="http://placehold.it/350x240&text=course+logo" alt="sample optional course"
-                  h1 sample optional course
-                  a.add href="#" track it!
+            / - 5.times do
+            /   li
+            /     article.coursera
+            /       .illustration style="background-image: url('http://placehold.it/350x240&text=course+logo')"
+            /         img src="http://placehold.it/350x240&text=course+logo" alt="sample optional course"
+            /       h1 sample optional course
+            /       a.add href="#" track it!
 
         .three.columns.sidebar
           = link_to "Go to dashboard", dashboard_index_path, class: "bigbutton"
