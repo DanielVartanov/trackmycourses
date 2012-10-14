@@ -6,7 +6,7 @@
       <ul>
         <% for(i=0; i < chapter.get('lectures').length; i++) { var section = chapter.get('lectures')[i]; %>
           <li> 
-            <%= section['title'] %>
+            <a target="_blank" href="<%= section['url'] %>"><%= section['title'] %></a>
             <span class="info"> Practicies: <%= section['practice_count'] %></span>
           </li>
         <% } %>
@@ -20,7 +20,7 @@
       <ul>
         <% for(i=0; i < chapter.get('assignments').length; i++) { var section = chapter.get('assignments')[i]; %>
           <li> 
-            <%= section['title'] %>
+            <a target="_blank" href="<%= section['url'] %>"><%= section['title'] %></a>
           </li>
         <% } %>
       </ul>
