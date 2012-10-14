@@ -14,7 +14,7 @@ class AccountsController < ApplicationController
       sign_in
     end
 
-    redirect_to dashboard_index_url protocol: 'http'
+    redirect_to root_url protocol: 'http'
   end
 
   protected
