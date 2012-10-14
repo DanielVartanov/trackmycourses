@@ -123,6 +123,9 @@ footer {
       width: 100%;
       text-align: center;
       border-radius: 0 0 5px 5px;
+      &.active{
+        display: block;
+      }
       li {
         list-style-type: none;
         display: inline-block;
