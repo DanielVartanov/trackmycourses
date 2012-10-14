@@ -4,6 +4,22 @@
       h2 Dashboard
       .row
         .nine.columns 
+          #weeks
+            .row
+              .four.columns.previous
+                a#prev-week href="#" 
+                  | Previous week
+                  span.date 08.10 - 14.10
+
+              .four.columns.current
+                a#current-week href="#" This week
+                span.date 08.10 - 14.10
+
+              .four.columns.next
+                a#next-week href="#" 
+                  | Next week
+                  span.date 08.10 - 14.10
+
           #summary
             .row
               .four.columns.lectures
@@ -11,17 +27,14 @@
                   em 10
                   |  lectures
                 h5 (6 hrs. 40 minutes)
-                h4
+              .four.columns.practicies
+                h3
                   em 10
                   |  practicies
               .four.columns.assigments
                 h3
                   em 4
                   |  assigments
-              .four.columns.other
-                h3
-                  em 5
-                  |  other tasks
 
           ul.accordion
             - 5.times do |i|
