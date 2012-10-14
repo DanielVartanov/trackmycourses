@@ -8,13 +8,11 @@ class AccountsController < ApplicationController
     
     sign_in_as account
 
-    puts session.inspect
-    
     redirect_to dashboard_index_path
   end
 
   protected
-
+  
   def sign_in_as(account)
     session[:user_id] = account.id
   end
