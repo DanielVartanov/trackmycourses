@@ -625,9 +625,6 @@ div.orbit-wrapper {
     left: 0;
     bottom: -2px;
   }
-  .sidebar {
-    padding: 0 0 0 15px;
-  }
   .my-accounts {
     border-left: 1px solid #c3c3c3;
     .header {
@@ -717,6 +714,54 @@ div.orbit-wrapper {
             }
           }
         }
+      }
+    }
+  }
+  #summary {
+    border: 1px solid #c5c5c5;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 1px #c5c5c5;
+    .columns{
+      min-height: 146px;
+      &:first-child{
+        border-right: 1px solid #c5c5c5;
+      }
+      &:last-child{
+        border-left: 1px solid #c5c5c5;
+      }
+      em{
+        font-style: normal;
+        color: #74b62c;
+        font-size: 1.2em;
+      }
+      h3, h4, h5 {
+        font-weight: normal;
+        display: block;
+        margin: 4px 0;
+      }
+      h3{
+        font-size: 1.8em;
+        color: #3c3c3c;
+      }
+      h4{
+        font-size: 1.2em;
+        color: #3c3c3c;
+      }
+      h5 {
+        font-size: 1em;
+        color: #737373;
+      }
+    }
+    .lectures{
+      h3{
+        margin-top: 34px;
+      }
+    }
+    .assigments, .other {
+      h3{
+        margin: 55px 0 0;
       }
     }
   }
