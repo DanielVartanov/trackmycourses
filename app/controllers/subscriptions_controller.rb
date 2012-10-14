@@ -5,6 +5,9 @@ class SubscriptionsController < ApplicationController
   end
 
   def index
-    render :json => session[:course_ids] || []
+    respond_to do |format|
+      format.html
+      format.json { render :json => session[:course_ids] || [] }
+    end
   end
 end
