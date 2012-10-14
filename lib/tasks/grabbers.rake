@@ -34,8 +34,7 @@ namespace :grab do
           if video_ids.empty?
             node = grabber.page.search('div.video')
             if node.present?
-              debugger
-              video_id = node.attr("data-streams").value.split(':').last
+              video_ids.push node.attr("data-streams").value.split(':').last
             end
           end
 
