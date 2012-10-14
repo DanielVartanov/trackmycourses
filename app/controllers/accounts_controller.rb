@@ -1,6 +1,6 @@
 class AccountsController < ApplicationController
   before_filter :find_account
-  
+
   def create
     if logged_in?
       @account = current_user
