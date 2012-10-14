@@ -9,5 +9,4 @@ class TrackMyCourses.Views.ChaptersView extends Backbone.View
     collection.each @renderChapter
 
   renderChapter: (chapter) ->
-    console.log chapter.get('lectures')
     @.$el.append new TrackMyCourses.Views.ChapterView(model: chapter).render().el
