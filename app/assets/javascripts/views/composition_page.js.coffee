@@ -1,5 +1,10 @@
 class TrackMyCourses.Views.CompositionPage extends Backbone.View
   el: '#composition-page'
+  button: '#to_dashboard'
+
+  events:
+    'mouseenter #to_dashboard': 'toDashboardMouseEnter'
+    'click #to_dashboard': 'toDashboardClicked'
 
   initialize: ->
     _.bindAll @
@@ -27,3 +32,14 @@ class TrackMyCourses.Views.CompositionPage extends Backbone.View
   subscribtionChanged: (subscription) ->
     @coursesView.updateCourses(subscription.get('lastChangedCourse'))
     @subscribedCoursesView.updateCourses(subscription.get('lastChangedCourse'))
+
+  toDashboardMouseEnter: ->
+    if @courses.subscribed().length is 0
+      $(@button).addClass "has-tip"
+    else
+      $(@button).removeClass "has-tip"
+
+  toDashboardClicked: (event) ->
+    if @courses.subscribed().length is 0
+      event.preventDefault()
+

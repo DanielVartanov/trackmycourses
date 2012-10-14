@@ -53,7 +53,7 @@ namespace :grab do
         begin
           grabber.page.link_with(text: 'Progress').click
         rescue NoMethodError
-          continue
+          next
         end
 
         grabber.page.search('ol.chapters > li').each_with_index do |chapter_xml, index|
