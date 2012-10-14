@@ -289,7 +289,7 @@ div.orbit-wrapper {
     }
   }
 }
-.subscription {
+.subscription, .dashboard{
   position: relative;
   padding: 45px 0 50px;
   background: white;
@@ -322,6 +322,8 @@ div.orbit-wrapper {
     font-size: 2em;
     margin: 0 0 27px;
   }
+}
+.subscription {
   #search {
     margin-bottom: 40px;
     input[type="text"] {
@@ -498,9 +500,6 @@ div.orbit-wrapper {
         font-size: 1.3em;
         color: #454545;
       } 
-      .button{
-        float: right;
-      }
     }
 
     #selected_courses {
@@ -587,5 +586,94 @@ div.orbit-wrapper {
     background: white;
     left: 0;
     bottom: -2px;
+  }
+  .sidebar {
+    padding: 0 0 0 15px;
+  }
+  .my-accounts {
+    border-left: 1px solid #c3c3c3;
+    .header {
+      height: 50px;
+      h2 {
+        margin: 10px 0 0 20px;
+        float: left;
+        font-size: 1.3em;
+        color: #454545;
+      } 
+    }
+    .accounts{
+      li {
+        position: relative;
+        display: block;
+        list-style-type: none;
+        padding: 10px;
+        border-top: 1px solid #c3c3c3;
+        min-height: 48px;
+        text-align: center;
+        &:last-child{
+          text-align: left;
+          color: #7e7d7d;
+          font-family: "Georgia";
+          font-style: italic;
+        }
+        .remove{
+          display: none;
+          position: absolute;
+          height: 19px;
+          width: 19px;
+          right: 2px;
+          bottom: 8px;
+          background: url("/images/remove.png");
+          text-indent: -9999px;
+        }
+        &.connected {
+          &:hover{
+            .remove {
+              display: block;
+            }
+          }
+        }
+        a {
+          &:before {
+            content: "";
+            display: inline-block;
+            height: 23px;
+            width: 23px;
+            background-image: url("/images/network_accounts_mini.png");
+            background-repeat: no-repeat;
+            margin: 0 15px -6px 0;
+          }
+        }
+        &.github {
+          a {
+            &:before {
+              width: 51px;
+              background-position: 0 0;
+            }
+          }
+        }
+        &.facebook {
+          a {
+            &:before {
+              background-position: -57px 0;
+            }
+          }
+        }
+        &.google {
+          a {
+            &:before {
+              background-position: -89px 0;
+            }
+          }
+        }
+        &.twitter {
+          a {
+            &:before {
+              background-position: -120px 0;
+            }
+          }
+        }
+      }
+    }
   }
 }
