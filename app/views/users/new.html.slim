@@ -4,23 +4,27 @@
       h2 Choose your courses to track
       .row
         .nine.columns 
-          .row.collapse 
-            .eight.mobile-three.columns 
-              input type="text"
-            .four.mobile-one.columns 
-              a.postfix.button.expand href="#" Search
+          form#search
+            input type="text" placeholder="Find your course..."
+            input type="submit"
           ul.block-grid.two-up.course-list
             - 5.times do
               li
-                article
+                article.coursera
+                  .illustration style="background-image: url('http://placehold.it/350x240&text=course+logo')"
+                    img src="http://placehold.it/350x240&text=course+logo"
                   h1 sample optional course
+                  a.add href="#" track it!
 
-        .three.columns
+        .three.columns.sidebar
           = link_to "Go to dashboard", dashboard_index_path, class: "bigbutton"
           .my-courses
             .header
               h2 My courses          
             #selected_courses
               - 5.times do
-                article
+                article.coursera
+                  .illustration style="background-image: url('http://placehold.it/350x240&text=course+logo')"
+                    img src="http://placehold.it/350x240&text=course+logo"
                   h1 sample selected course
+                  a.remove href="#" remove
