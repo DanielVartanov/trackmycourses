@@ -209,7 +209,8 @@ footer {
   padding: 26px 0;
   font-size: 1.8em;
   color: #2785c0;
-  text-shadow: -1px -1px 1px #206c9c, 1px 1px 1px #fff;
+  text-shadow: 1px 1px 1px #fff;
+  font-weight: bold;
   background: #D7D7D7;
   background-image: -ms-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
   background-image: -moz-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
@@ -308,8 +309,11 @@ div.orbit-wrapper {
     padding: 0 0 0 15px;
   }
   .bigbutton {
-    padding: 10px 0;
+    padding: 12px 0;
     margin-bottom: 37px;
+    font-size: 1.4em;
+    font-family: Arial;
+    text-shadow: 1px 1px 1px #fff;
   }
   h2 {
     font-style: italic;
@@ -486,7 +490,7 @@ div.orbit-wrapper {
       h2 {
         margin: 10px 0 0 20px;
         float: left;
-        font-size: 1.6em;
+        font-size: 1.3em;
         color: #454545;
       } 
       .button{
