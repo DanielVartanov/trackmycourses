@@ -832,7 +832,7 @@ div.orbit-wrapper {
     }
     .lectures{
       h3{
-        margin-top: 55px;
+        margin-top: 44px;
       }
     }
     .assigments, .practicies {
@@ -956,4 +956,9 @@ div.orbit-wrapper {
 }
 .sign_out {
   text-align: right;
+}
+#subscribe {
+  &:before{
+    content: none;
+  }
 }
