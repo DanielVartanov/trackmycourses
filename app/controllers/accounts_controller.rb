@@ -1,5 +1,5 @@
 class AccountsController < ApplicationController
-  before_filter :find_account, only: :create
+  before_filter :find_account, only: [:create]
 
   def create
     if logged_in?
@@ -15,6 +15,12 @@ class AccountsController < ApplicationController
     end
 
     redirect_to root_url protocol: 'http'
+  end
+
+  def update
+    current_user.update_attribute(:twitter_notify, params[:twitter_notify]) if (params.key?(:twitter_notify) && logged_in? && current_user.authenticated_with?("twitter"))
+ 
+    render json: :nothing, status: 200
   end
 
   def sign_out

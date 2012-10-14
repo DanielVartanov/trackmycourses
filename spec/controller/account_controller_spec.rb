@@ -1,6 +1,94 @@
 require 'spec_helper'
 
 describe AccountsController, :type => :controller do
+  describe '#update' do
+    let(:circuits) { Course.create! }
+    let(:chemistry) { Course.create! }
+    let(:pharmacy) { Course.create! }
+
+    let(:current_user) { Account.create! }
+    let(:subscribed_course_ids) { [circuits.id, chemistry.id, pharmacy.id] }
+
+    context 'when user has connected twitter account' do
+      let(:twitter_uid) { '643321084' }
+      let(:twitter_username) { 'daniel.vartanov' }
+
+      before do
+        current_user.authentications.create! :provider => 'twitter', :uid => twitter_uid, :nickname => twitter_username
+      end
+
+      context 'when user is logged in' do
+        before do
+          session[:user_id] = current_user.id
+          session[:course_ids] = subscribed_course_ids
+        end
+        
+        context 'when notifications disabled' do
+          it 'should update twitter notification' do
+            put :update, twitter_notify: true
+
+            response.status.should == 200
+
+            current_user.reload
+            current_user.twitter_notify.should be_true
+          end
+        end
+
+        context 'when notifications enabled' do
+          before { current_user.update_attribute(:twitter_notify, true) }
+
+          it 'should update twitter notification' do
+            put :update, twitter_notify: false
+
+            response.status.should == 200
+
+            current_user.reload
+            current_user.twitter_notify.should be_false
+          end
+        end
+
+        context 'when doesnt send params' do
+          it 'should do nothing with current user account' do
+            put :update
+
+            response.status.should == 200
+
+            current_user.reload
+            current_user.twitter_notify.should be_false
+          end
+        end
+      end
+
+      context 'when user is not logged in' do
+        it 'should update twitter notification' do
+          put :update, twitter_notify: true
+
+          response.status.should == 200
+          Account.last.twitter_notify.should be_false
+        end
+      end
+    end
+
+    context 'when user hasnt connect twitter account' do
+      let(:facebook_uid) { '643321084' }
+      let(:facebook_username) { 'daniel.vartanov' }
+
+      before do
+        current_user.authentications.create! :provider => 'facebook', :uid => facebook_uid, :nickname => facebook_username
+        session[:user_id] = current_user.id
+        session[:course_ids] = subscribed_course_ids
+      end
+      
+      it 'should update twitter notification' do
+        put :update, twitter_notify: true
+
+        response.status.should == 200
+        Account.last.twitter_notify.should be_false
+      end
+
+    end
+  end
+
   describe '#sign_out' do
     context 'when user is logged in' do
       let(:circuits) { Course.create! }

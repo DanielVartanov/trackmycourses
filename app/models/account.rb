@@ -1,5 +1,5 @@
 class Account < ActiveRecord::Base
-  attr_accessible :course_ids, :uid, :twitter_username
+  attr_accessible :course_ids, :uid, :twitter_username, :twitter_notify
   
   has_many :subscriptions
   has_many :courses, :through => :subscriptions

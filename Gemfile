@@ -14,7 +14,6 @@ group :development do
   gem 'nokogiri-pretty'
   gem 'hirb'
   gem 'sqlite3'
-  gem 'debugger'
   # Deploy with Capistrano
   gem 'capistrano'
   gem 'rvm-capistrano'
@@ -25,6 +24,10 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'database_cleaner'
+end
+
+group :test, :development do
+  gem 'debugger'
 end
 
 group :production do
@@ -46,3 +49,4 @@ group :assets do
   gem 'zurb-foundation', '~> 3.0.9'
   gem 'ejs', '1.0.0'
 end
+

@@ -5,6 +5,50 @@ def change_https_to_http(url)
 end
 
 namespace :grab do
+  desc 'Grab video list'
+  task video: :environment do
+    platform = Platform[:edx]
+
+    grabber = Mechanize.new
+    grabber.agent.http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+    grabber.get platform.url
+    form = grabber.page.form_with(id: 'login_form')
+    form.email = platform.credentials[:email]
+    form.password = platform.credentials[:password]
+    csrf_token = grabber.cookie_jar.jar['www.edx.org']['/']['csrftoken'].value
+    grabber.request_headers['X-CSRFToken'] = csrf_token
+    grabber.submit(form)
+
+    platform.courses.each do |course|
+      course.chapters.each do |chapter|
+        chapter.lectures.each do |lecture|
+          grabber.get lecture.url
+          video_id = false
+
+          matched_video = grabber.page.search('.seq_contents').text.match(/1\.0:([a-zA-Z0-9-_]{11})/).to_a
+          if matched_video.any?
+            video_id = matched_video[1]
+          else
+            node = grabber.page.search('div.video')
+            if node.present?
+              video_id = node.attr("data-streams").value.split(':').last
+            end
+          end
+
+          if video_id
+            doc = Nokogiri::XML open("https://gdata.youtube.com/feeds/api/videos/#{video_id}?v=2")
+            doc.remove_namespaces!
+            lecture.duration = doc.xpath("//duration").attr('seconds').value.to_i
+            lecture.save
+          end
+        end
+      end
+    end
+
+    puts "Lecture durations are updated"
+  end
+
+
   desc 'Grab course list'
   task courses: :environment do
     platform = Platform[:edx]
@@ -63,7 +107,7 @@ namespace :grab do
           chapter.save
 
           section = chapter_xml.css('ol.sections > li').each do |section_xml|
-            section_url = platform.url + section_xml.css('h3 > a').attr('href').value
+            section_url = change_https_to_http(platform.url) + section_xml.css('h3 > a').attr('href').value
             section_title = section_xml.css('h3 > a').text.squish
             exercise_count_matched = section_xml.css('h3 > span').text.match(/\/(\d+)/).to_a
             section_score_count = exercise_count_matched[1] if exercise_count_matched.any?
@@ -76,7 +120,7 @@ namespace :grab do
             rescue ArgumentError
               section_due_date = ""
             end
-            
+
             if section_due_date.blank?
               section = Lecture.new practice_count: section_practice_count,
                                     duration: section_duration,
@@ -91,7 +135,7 @@ namespace :grab do
                                        url: section_url,
                                        chapter: chapter
             end
-            
+
             section.save!
           end
         end
@@ -110,5 +154,6 @@ namespace :db do
     Rake::Task['db:seed'].execute
     Rake::Task['grab:courses'].execute
     Rake::Task['grab:internals'].execute
+    Rake::Task['grab:video'].execute
   end
 end
