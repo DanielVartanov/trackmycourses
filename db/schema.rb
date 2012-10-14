@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20121014134943) do
     t.string   "title"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "number"
   end
 
   create_table "courses", :force => true do |t|
@@ -49,12 +50,14 @@ ActiveRecord::Schema.define(:version => 20121014134943) do
   create_table "sections", :force => true do |t|
     t.integer  "chapter_id"
     t.string   "title"
-    t.integer  "exercise_count"
+    t.integer  "practice_count"
     t.datetime "due_date"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
     t.string   "url"
     t.integer  "score_count"
+    t.integer  "duration"
+    t.string   "type"
   end
 
   create_table "subscriptions", :force => true do |t|

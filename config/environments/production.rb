@@ -65,5 +65,5 @@ TrackMyCourses::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  OmniAuth.config.full_host = "http://coursetools.r12.railsrumble.com/"
+  OmniAuth.config.full_host = "http://coursetools.r12.railsrumble.com"
 end

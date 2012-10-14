@@ -8,6 +8,9 @@ require 'rspec/autorun'
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
+DatabaseCleaner[:active_record].strategy = :truncation
+
+
 RSpec.configure do |config|
   # ## Mock Framework
   #
@@ -37,4 +40,8 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.include JSONHelpers, :type => :controller
+
+  config.after(:each) do
+    DatabaseCleaner.clean    
+  end
 end
