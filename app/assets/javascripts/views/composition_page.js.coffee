@@ -4,6 +4,14 @@ class TrackMyCourses.Views.CompositionPage extends Backbone.View
     _.bindAll @
 
     @courses = new TrackMyCourses.Collections.Courses()
-    new TrackMyCourses.Views.Courses(collection: @courses)
+    @courses.on('reset', @coursesFetched).fetch()
 
-    @courses.fetch()
+  coursesFetched: (courses) ->
+    @subscription = new TrackMyCourses.Models.Subscription()
+    @subscription.on 'change', @subscriptionFetched
+    @subscription.fetch()
+
+  subscriptionFetched: (subscription) ->
+    @courses.setSubscription(subscription)
+    @coursesView = new TrackMyCourses.Views.Courses(collection: @courses).render()
+    @subscribedCoursesView = new TrackMyCourses.Views.SubscribedCourses(collection: @courses).render()

@@ -3,8 +3,8 @@
     .row
       .nine.columns
         #slider
-          - 3.times do
-            img src="http://placehold.it/620x366&text=slide"
+          - 3.times do |i|
+            img src="http://placehold.it/620x366&text=slide" alt="slide_#{i}"
 
       .three.columns.sidebar
         = link_to "Start tracking", account_subscriptions_path, class: "bigbutton"

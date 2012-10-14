@@ -1,9 +1,7 @@
-<li>
-  <article class="<%= platform_title %>">
-    <div class="illustration" style="background-image: url('<%= url %>')"
-      <img src="<%= url %>" alt="<%= title %>">
-    </div>
-    <h1><%= title %></h1> 
-    <a class="add">track it!</a>
-  </article>
-</li>
+<article class="<%= course.get('platform').name %>">
+  <div class="illustration" style="background-image: url('<%= course.get('logo_url') %>')"
+    <img src="<%= course.get('logo_url') %>" alt="<%= course.get('title') %>">
+  </div>
+  <h1><%= course.get('title') %></h1> 
+  <a class="add">track it!</a>
+</article>
