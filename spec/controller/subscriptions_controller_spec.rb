@@ -42,11 +42,11 @@ describe SubscriptionsController, :type => :controller do
 
         context 'when user gets a list of his subscriptions' do
           before do
-            get :index
+            get :index, :format => :json
           end
 
           it 'should return a plain list of course ids' do
-            JSON.parse(response.body).should == [chemistry.id.to_s, pharmacy.id.to_s]
+            response_json.should == [chemistry.id.to_s, pharmacy.id.to_s]
           end
         end
       end
@@ -54,11 +54,11 @@ describe SubscriptionsController, :type => :controller do
       context 'given there is no subscriptions yet' do
         context 'when user gets a list of his subscriptions' do
           before do
-            get :index
+            get :index, :format => :json
           end
 
           it 'should return an empty array' do
-            JSON.parse(response.body).should == []
+            response_json.should == []
           end
         end
       end
