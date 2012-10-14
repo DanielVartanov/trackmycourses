@@ -7,6 +7,7 @@ gem 'jquery-rails'
 gem 'slim'
 gem 'jbuilder'
 gem 'mechanize'
+gem 'omniauth-twitter'
 
 group :development do
   gem 'nokogiri-pretty'

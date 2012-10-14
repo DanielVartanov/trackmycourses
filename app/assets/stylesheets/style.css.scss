@@ -734,6 +734,7 @@ div.orbit-wrapper {
         opacity: 1;
       }
       a {
+        cursor: pointer;
         margin-left: 16px;
         display: block;
         position: relative;
@@ -752,6 +753,7 @@ div.orbit-wrapper {
     .current {
       text-align: center;
       a {
+        cursor: pointer;
         color: #8c8c8c;
         &:hover {
           color: #3c3c3c;
@@ -770,6 +772,7 @@ div.orbit-wrapper {
         opacity: 1;
       }
       a {
+        cursor: pointer;
         margin-right: 16px;
         display: block;
         position: relative;

@@ -1,5 +1,5 @@
 TrackMyCourses::Application.routes.draw do
-  resources :dashboard, only: :index
+  resources :dashboard
   resources :courses
 
   resource :account do
@@ -7,4 +7,5 @@ TrackMyCourses::Application.routes.draw do
   end
 
   root :to => 'home#index'
+  match "/auth/:provider/callback" => "accounts#create"
 end
