@@ -8,8 +8,7 @@ class AccountsController < ApplicationController
 
     sign_in_as account
 
-    # redirect_to dashboard_index_path
-    redirect_to "http://coursetools.r12.railsrumble.com/dashboard"
+    redirect_to dashboard_index_url protocol: 'http'
   end
 
   protected
