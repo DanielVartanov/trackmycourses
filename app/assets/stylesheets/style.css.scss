@@ -244,7 +244,7 @@ div.orbit-wrapper {
     bottom: -2px;
   }
   .sidebar {
-    padding: 0;
+    padding: 0 0 0 15px;
   }
   .bigbutton {
     padding: 10px 0;
@@ -330,13 +330,45 @@ div.orbit-wrapper {
         }
         &:before {
           content: "";
-          height: 42px;
-          width: 126px;
+          height: 41px;
+          width: 138px;
           position: absolute;
-          top: -6px;
-          left: 10px;
+          top: 0;
+          left: 5px;
+          background: url("/images/label_shadows.png");
         }
-
+      }
+      &.coursera {
+        &:after {
+          background: url("/images/coursera_label.png") no-repeat center center,
+            -ms-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
+          background: url("/images/coursera_label.png") no-repeat center center,
+            -moz-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
+          background: url("/images/coursera_label.png") no-repeat center center,
+            -o-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
+          background: url("/images/coursera_label.png") no-repeat center center,
+            -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #D7D7D7));
+          background: url("/images/coursera_label.png") no-repeat center center,
+            -webkit-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
+          background: url("/images/coursera_label.png") no-repeat center center,
+            linear-gradient(to bottom, #FFFFFF 0%, #D7D7D7 100%);
+        }
+      }
+      &.edx {
+        &:after {
+          background: url("/images/edx_label.png") no-repeat center center,
+            -ms-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
+          background: url("/images/edx_label.png") no-repeat center center,
+            -moz-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
+          background: url("/images/edx_label.png") no-repeat center center,
+            -o-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
+          background: url("/images/edx_label.png") no-repeat center center,
+            -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #D7D7D7));
+          background: url("/images/edx_label.png") no-repeat center center,
+            -webkit-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
+          background: url("/images/edx_label.png") no-repeat center center,
+            linear-gradient(to bottom, #FFFFFF 0%, #D7D7D7 100%);
+        }
       }
       h1 {
         font-size: 1em;
