@@ -37,12 +37,12 @@ namespace :deploy do
 
   desc "Update configuration files"
   task :update_configuration_files, roles: :app do
-    run "[ -f #{shared_path}/config/platforms.yml ] && cp #{shared_path}/config/platforms.yml #{current_path}/config/; true"
+    run "cp #{shared_path}/config/platforms.yml #{current_path}/config/; true"
   end
 end
 
-after 'deploy:update_code', 'deploy:remove_rvmrc'
-after 'deploy:update_code', 'deploy:update_configuration_files'
+after 'deploy:create_symlink', 'deploy:remove_rvmrc'
+after 'deploy:create_symlink', 'deploy:update_configuration_files'
 # after "deploy:restart", "resque:restart"
 
 after 'deploy', 'deploy:cleanup'

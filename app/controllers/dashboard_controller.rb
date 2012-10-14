@@ -10,10 +10,12 @@ class DashboardController < ApplicationController
       total_lecture_count = lectures.count
       total_practice_count = lectures.map(&:practice_count).inject(&:+)
       total_assignment_count = assignments.size
+      total_lecture_duration = lectures.map(&:duration).inject(&:+)
     else
       total_lecture_count = 0
       total_practice_count = 0
       total_assignment_count = 0
+      total_lecture_duration = 0
     end
 
     respond_to do |format|
@@ -23,6 +25,7 @@ class DashboardController < ApplicationController
           total_lecture_count: total_lecture_count.to_i,
           total_practice_count: total_practice_count.to_i,
           total_assignment_count: total_assignment_count.to_i,
+          total_lecture_duration: total_lecture_duration.to_i,
           chapters: chapters
         }
       end
