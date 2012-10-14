@@ -1,21 +1,31 @@
 require 'spec_helper'
 
 describe Course do
-  fixtures :courses
-  fixtures :chapters
-
-  let(:course) { Course.find(2) }
-
   describe '#chapter_at_week' do
-    subject { course.chapter_at_week(week) }
-
+    
     context 'Course has chapter for current week' do
+      fixtures :courses
+      fixtures :chapters
+
       let(:week) { 37 }
+      let(:course) { Course.find(2) }
 
-      it { should == course.chapters.second }
+      it 'should return chapter object' do
+        course.chapter_at_week(week).should == course.chapters.second
+      end
     end
 
-    context "course hasn't started yet" do
+    context "Course hasn't started yet" do
+      fixtures :courses
+      fixtures :chapters
+
+      let(:week) { 35 }
+      let(:course) { Course.find(2) }
+      
+      it 'should return nil' do
+        course.chapter_at_week(week).should == nil
+      end
     end
+
   end
 end

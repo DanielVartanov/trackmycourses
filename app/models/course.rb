@@ -11,7 +11,7 @@ class Course < ActiveRecord::Base
   end
 
   def chapter_at_week(week)
-    chapter_number = week - start_date.cweek
+    chapter_number = week - start_date.cweek + 1
     self.chapters.find_by_number chapter_number
   end
 

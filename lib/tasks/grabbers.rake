@@ -63,24 +63,44 @@ namespace :grab do
           chapter.save
 
           section = chapter_xml.css('ol.sections > li').each do |section_xml|
-            section = Section.new chapter: chapter
-            section.url = platform.url + section_xml.css('h3 > a').attr('href').value
-            section.title = section_xml.css('h3 > a').text.squish
+            # section = Section.new chapter: chapter
+            section_url = platform.url + section_xml.css('h3 > a').attr('href').value
+            section_title = section_xml.css('h3 > a').text.squish
             exercise_count_matched = section_xml.css('h3 > span').text.match(/\/(\d+)/).to_a
-            section.score_count = exercise_count_matched[1] if exercise_count_matched.any?
-            section.exercise_count = section_xml.css('.scores > ol > li').count
+            section_score_count = exercise_count_matched[1] if exercise_count_matched.any?
+            section_practice_count = section_xml.css('.scores > ol > li').count
             section_due_date_string = section_xml.css('p > em').text
+            section_duration = 0 # TODO: Make it countable!!!!!!!!!
+
             begin
-              section.due_date = DateTime.parse section_due_date_string if section_due_date_string
+              section_due_date = DateTime.parse section_due_date_string if section_due_date_string
             rescue ArgumentError
+              section_due_date = ""
             end
-            section.save
+            
+            if section_due_date.blank?
+              section = Lecture.new practice_count: section_practice_count,
+                                    duration: section_duration,
+                                    title: section_title,
+                                    url: section_url,
+                                    score_count: section_score_count,
+                                    chapter: chapter
+
+            else
+              section = Assignment.new due_date: section_due_date,
+                                       title: section_title,
+                                       url: section_url,
+                                       chapter: chapter
+            end
+            
+            section.save!
           end
         end
       end
     end
     puts "#{Chapter.count} chapters grabbed"
-    puts "#{Section.count} sections grabbed"
+    puts "#{Lecture.count} lectures grabbed"
+    puts "#{Assignment.count} assignments grabbed"
   end
 end
 

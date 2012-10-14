@@ -41,7 +41,7 @@ RSpec.configure do |config|
 
   config.include JSONHelpers, :type => :controller
 
-  config.before(:each) do
+  config.after(:each) do
     DatabaseCleaner.clean    
   end
 end
