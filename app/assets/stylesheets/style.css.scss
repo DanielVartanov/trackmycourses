@@ -440,6 +440,7 @@ div.orbit-wrapper {
       h1 {
         font-size: 1.2em;
         font-weight: normal;
+        color: #3c3c3c;
       }
       .illustration {
         height: 145px;
@@ -495,21 +496,68 @@ div.orbit-wrapper {
 
     #selected_courses {
       article {
+        position: relative;
         padding: 20px;
         border-top: 1px solid #c3c3c3;
-        &:last-child{
+        min-height: 147px;
+        &:hover{
+          .remove {
+            display: block;
+          }
         }
         h1 {
-          font-size: 1.2em;
-          margin: 0;
+          font-size: 1em;
+          font-weight: normal;
+          margin: 14px 0 0;
+          color: #454545;
+        }
+        .remove{
+          display: none;
+          position: absolute;
+          height: 19px;
+          width: 19px;
+          right: 2px;
+          bottom: 8px;
+          background: url("/images/remove.png");
+          text-indent: -9999px;
         }
         .illustration {
+          position: relative;
           width: 72px;
           height: 48px;
           background-size: cover;
           background-position: center center;
           img {
             display: none;
+          }
+        }
+        &.coursera, &.edx {
+          .illustration{
+            &:after{
+              content: "";
+              position: absolute;
+              right: -92px;
+              top: 9px;
+              height: 30px;
+              width: 82px;
+              background-position: left center;
+              background-size: contain;
+              background-repeat: no-repeat;
+            }
+          }
+        }
+        &.coursera {
+          .illustration{
+            &:after{
+              background-image: url("/images/coursera_label.png");
+            }
+          }
+        }
+        &.edx {
+          .illustration{
+            &:after{
+              background-image: url("/images/edx_label.png");
+            }
           }
         }
       }
