@@ -1,3 +1,5 @@
+require 'open-uri'
+
 def change_https_to_http(url)
   parsed_uri = URI.parse(url)
   parsed_uri.scheme = 'http'
