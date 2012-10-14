@@ -115,7 +115,7 @@ namespace :grab do
             section_score_count = exercise_count_matched[1] if exercise_count_matched.any?
             section_practice_count = section_xml.css('.scores > ol > li').count
             section_due_date_string = section_xml.css('p > em').text
-            section_duration = 0 # TODO: Make it countable!!!!!!!!!
+            section_duration = 0
 
             begin
               section_due_date = DateTime.parse section_due_date_string if section_due_date_string
