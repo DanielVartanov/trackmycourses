@@ -10,10 +10,10 @@ class AccountsController < ApplicationController
         create_account
         add_authentication
       end
-      
+
       sign_in
     end
-    
+
     redirect_to dashboard_index_url protocol: 'http'
   end
 
