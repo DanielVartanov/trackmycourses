@@ -8,6 +8,7 @@ gem 'slim'
 gem 'jbuilder'
 gem 'mechanize'
 gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 
 group :development do
   gem 'nokogiri-pretty'

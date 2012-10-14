@@ -6,7 +6,7 @@ class TrackMyCourses.Views.HomePage extends Backbone.View
     $("#slider").orbit
       animation: 'horizontal-push',
       animationSpeed: 800,
-      timer: false,
+      timer: true,
       resetTimerOnClick: false,
       advanceSpeed: 4000,
       pauseOnHover: true,

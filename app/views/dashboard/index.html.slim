@@ -61,12 +61,15 @@
           = link_to "My courses", account_subscriptions_path, class: "bigbutton back"
           .my-accounts
             .header
-              h2 Accounts          
+              h2 
+                | Accounts 
+                - if controller.__send__ :logged_in?    
+                  a.sign_out href="#" Sign out
             ul.accounts
               li.twitter class="#{'connected' if controller.__send__ :logged_in?}"
 
                 - if controller.__send__ :logged_in?
-                  span = (controller.__send__ :current_user).twitter_username
+                  span = (controller.__send__ :current_user).authentications.find_by_provider('twitter').nickname
                   / a.remove href="#" remove
                 - else
                   a href="/auth/twitter" Connect
