@@ -3,9 +3,10 @@ class TrackMyCourses.Views.Courses extends Backbone.View
 
   initialize: ->
     _.bindAll @
-    # @collection.on 'reset', @collectionReset
 
-  collectionReset: (courses) ->
+  render: ->
     @.$el.html ''
-    courses.each (course) ->
-      @.$el.append new TrackMyCourses.Views.Course(model: course).render().el
+    @collection.each @addCourse
+
+  addCourse: (course) ->
+    @.$el.append new TrackMyCourses.Views.Course(model: course).render().el

@@ -374,6 +374,10 @@ div.orbit-wrapper {
     li {
       margin-bottom: 30px;
       padding-bottom: 0;
+
+      &.subscribed {
+        display: none;
+      }
     }
     article{
       min-height: 250px;
