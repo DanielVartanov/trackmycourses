@@ -3,519 +3,623 @@
   id: 1
   chapter_id: 1
   title: Welcome to CS169.1x!
-  exercise_count: 0
+  practice_count: 0
   due_date: 
-  created_at: 2012-10-14 08:16:53.235960000 Z
-  updated_at: 2012-10-14 08:16:53.235960000 Z
+  created_at: 2012-10-14 13:20:21.556938000 Z
+  updated_at: 2012-10-14 13:20:21.556938000 Z
   url: https://edx.org/courses/BerkeleyX/CS169.1x/2012_Fall/courseware/Overview/Welcome/
   score_count: 
+  duration: 0
+  type: Lecture
 :2:
   id: 2
   chapter_id: 1
   title: edX Tutorial
-  exercise_count: 3
+  practice_count: 3
   due_date: 
-  created_at: 2012-10-14 08:16:53.240277000 Z
-  updated_at: 2012-10-14 08:16:53.240277000 Z
+  created_at: 2012-10-14 13:20:21.713149000 Z
+  updated_at: 2012-10-14 13:20:21.713149000 Z
   url: https://edx.org/courses/BerkeleyX/CS169.1x/2012_Fall/courseware/Overview/edx_introduction/
   score_count: 3
+  duration: 0
+  type: Lecture
 :3:
   id: 3
   chapter_id: 2
   title: ! 'Lecture 1: Course Introduction'
-  exercise_count: 5
+  practice_count: 5
   due_date: 
-  created_at: 2012-10-14 08:16:53.246448000 Z
-  updated_at: 2012-10-14 08:16:53.246448000 Z
+  created_at: 2012-10-14 13:20:22.053889000 Z
+  updated_at: 2012-10-14 13:20:22.053889000 Z
   url: https://edx.org/courses/BerkeleyX/CS169.1x/2012_Fall/courseware/Week_1x/L1/
   score_count: 5
+  duration: 0
+  type: Lecture
 :4:
   id: 4
   chapter_id: 2
   title: ! 'Lecture 2: Service Oriented Architecture and Cloud Computing'
-  exercise_count: 2
+  practice_count: 2
   due_date: 
-  created_at: 2012-10-14 08:16:53.249389000 Z
-  updated_at: 2012-10-14 08:16:53.249389000 Z
+  created_at: 2012-10-14 13:20:22.228617000 Z
+  updated_at: 2012-10-14 13:20:22.228617000 Z
   url: https://edx.org/courses/BerkeleyX/CS169.1x/2012_Fall/courseware/Week_1x/L2/
   score_count: 2
+  duration: 0
+  type: Lecture
 :5:
   id: 5
   chapter_id: 2
   title: Quiz 0
-  exercise_count: 1
+  practice_count: 
   due_date: 2012-10-07 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:53.254056000 Z
-  updated_at: 2012-10-14 08:16:53.254056000 Z
+  created_at: 2012-10-14 13:20:22.423505000 Z
+  updated_at: 2012-10-14 13:20:22.423505000 Z
   url: https://edx.org/courses/BerkeleyX/CS169.1x/2012_Fall/courseware/Week_1x/DiagnosticQuiz/
-  score_count: 13
+  score_count: 
+  duration: 
+  type: Assignment
 :6:
   id: 6
   chapter_id: 3
   title: ! 'Lecture 3: Introduction to Ruby'
-  exercise_count: 1
+  practice_count: 1
   due_date: 
-  created_at: 2012-10-14 08:16:53.260072000 Z
-  updated_at: 2012-10-14 08:16:53.260072000 Z
+  created_at: 2012-10-14 13:20:22.779257000 Z
+  updated_at: 2012-10-14 13:20:22.779257000 Z
   url: https://edx.org/courses/BerkeleyX/CS169.1x/2012_Fall/courseware/Week_2x/L3/
   score_count: 1
+  duration: 0
+  type: Lecture
 :7:
   id: 7
   chapter_id: 3
   title: ! 'Lecture 4: Ruby continued'
-  exercise_count: 5
+  practice_count: 5
   due_date: 
-  created_at: 2012-10-14 08:16:53.263165000 Z
-  updated_at: 2012-10-14 08:16:53.263165000 Z
+  created_at: 2012-10-14 13:20:22.995398000 Z
+  updated_at: 2012-10-14 13:20:22.995398000 Z
   url: https://edx.org/courses/BerkeleyX/CS169.1x/2012_Fall/courseware/Week_2x/L4/
   score_count: 5
+  duration: 0
+  type: Lecture
 :8:
   id: 8
   chapter_id: 3
   title: Homework 1
-  exercise_count: 7
+  practice_count: 
   due_date: 2012-10-14 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:53.266505000 Z
-  updated_at: 2012-10-14 08:16:53.266505000 Z
+  created_at: 2012-10-14 13:20:23.162514000 Z
+  updated_at: 2012-10-14 13:20:23.162514000 Z
   url: https://edx.org/courses/BerkeleyX/CS169.1x/2012_Fall/courseware/Week_2x/Homework_1/
-  score_count: 700
+  score_count: 
+  duration: 
+  type: Assignment
 :9:
   id: 9
   chapter_id: 3
   title: Quiz 1
-  exercise_count: 12
+  practice_count: 
   due_date: 2012-10-14 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:53.269844000 Z
-  updated_at: 2012-10-14 08:16:53.269844000 Z
+  created_at: 2012-10-14 13:20:23.336379000 Z
+  updated_at: 2012-10-14 13:20:23.336379000 Z
   url: https://edx.org/courses/BerkeleyX/CS169.1x/2012_Fall/courseware/Week_2x/Quiz_1/
-  score_count: 12
+  score_count: 
+  duration: 
+  type: Assignment
 :10:
   id: 10
   chapter_id: 4
   title: ! 'Lecture 5: SaaS Architecture and Introduction to Rails'
-  exercise_count: 5
+  practice_count: 5
   due_date: 
-  created_at: 2012-10-14 08:16:53.277011000 Z
-  updated_at: 2012-10-14 08:16:53.277011000 Z
+  created_at: 2012-10-14 13:20:23.695858000 Z
+  updated_at: 2012-10-14 13:20:23.695858000 Z
   url: https://edx.org/courses/BerkeleyX/CS169.1x/2012_Fall/courseware/Week_3x/L5/
   score_count: 5
+  duration: 0
+  type: Lecture
 :11:
   id: 11
   chapter_id: 4
   title: ! 'Lecture 6: Basic Rails'
-  exercise_count: 4
+  practice_count: 4
   due_date: 
-  created_at: 2012-10-14 08:16:53.280109000 Z
-  updated_at: 2012-10-14 08:16:53.280109000 Z
+  created_at: 2012-10-14 13:20:23.853300000 Z
+  updated_at: 2012-10-14 13:20:23.853300000 Z
   url: https://edx.org/courses/BerkeleyX/CS169.1x/2012_Fall/courseware/Week_3x/L6/
   score_count: 4
+  duration: 0
+  type: Lecture
 :12:
   id: 12
   chapter_id: 4
   title: ! 'Lecture 7: Rails continued'
-  exercise_count: 2
+  practice_count: 2
   due_date: 
-  created_at: 2012-10-14 08:16:53.283424000 Z
-  updated_at: 2012-10-14 08:16:53.283424000 Z
+  created_at: 2012-10-14 13:20:24.028349000 Z
+  updated_at: 2012-10-14 13:20:24.028349000 Z
   url: https://edx.org/courses/BerkeleyX/CS169.1x/2012_Fall/courseware/Week_3x/L7/
   score_count: 2
+  duration: 0
+  type: Lecture
 :13:
   id: 13
   chapter_id: 4
   title: Homework 2
-  exercise_count: 3
+  practice_count: 
   due_date: 2012-10-21 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:53.286730000 Z
-  updated_at: 2012-10-14 08:16:53.286730000 Z
+  created_at: 2012-10-14 13:20:24.195289000 Z
+  updated_at: 2012-10-14 13:20:24.195289000 Z
   url: https://edx.org/courses/BerkeleyX/CS169.1x/2012_Fall/courseware/Week_3x/Homework_2/
-  score_count: 300
+  score_count: 
+  duration: 
+  type: Assignment
 :32:
   id: 32
   chapter_id: 9
   title: Welcome to 6.002x
-  exercise_count: 0
+  practice_count: 0
   due_date: 
-  created_at: 2012-10-14 08:16:55.489647000 Z
-  updated_at: 2012-10-14 08:16:55.489647000 Z
+  created_at: 2012-10-14 13:20:31.761999000 Z
+  updated_at: 2012-10-14 13:20:31.761999000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Overview/Welcome/
   score_count: 
+  duration: 0
+  type: Lecture
 :33:
   id: 33
   chapter_id: 9
   title: edX Tutorial
-  exercise_count: 6
+  practice_count: 6
   due_date: 
-  created_at: 2012-10-14 08:16:55.493063000 Z
-  updated_at: 2012-10-14 08:16:55.493063000 Z
+  created_at: 2012-10-14 13:20:31.928294000 Z
+  updated_at: 2012-10-14 13:20:31.928294000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Overview/edx_introduction/
   score_count: 6
+  duration: 0
+  type: Lecture
 :34:
   id: 34
   chapter_id: 9
   title: Using the Tools
-  exercise_count: 1
+  practice_count: 1
   due_date: 
-  created_at: 2012-10-14 08:16:55.495898000 Z
-  updated_at: 2012-10-14 08:16:55.495898000 Z
+  created_at: 2012-10-14 13:20:32.111622000 Z
+  updated_at: 2012-10-14 13:20:32.111622000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Overview/Lab0_Using_the_tools/
   score_count: 12
+  duration: 0
+  type: Lecture
 :35:
   id: 35
   chapter_id: 9
   title: Circuit Sandbox
-  exercise_count: 1
+  practice_count: 1
   due_date: 
-  created_at: 2012-10-14 08:16:55.499488000 Z
-  updated_at: 2012-10-14 08:16:55.499488000 Z
+  created_at: 2012-10-14 13:20:32.294930000 Z
+  updated_at: 2012-10-14 13:20:32.294930000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Overview/Circuit_Sandbox/
   score_count: 1
+  duration: 0
+  type: Lecture
 :36:
   id: 36
   chapter_id: 10
   title: Administrivia and Circuit Elements
-  exercise_count: 9
+  practice_count: 9
   due_date: 
-  created_at: 2012-10-14 08:16:55.505040000 Z
-  updated_at: 2012-10-14 08:16:55.505040000 Z
+  created_at: 2012-10-14 13:20:32.645489000 Z
+  updated_at: 2012-10-14 13:20:32.645489000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_1/Administrivia_and_Circuit_Elements/
   score_count: 23
+  duration: 0
+  type: Lecture
 :37:
   id: 37
   chapter_id: 10
   title: Circuit Analysis Toolchest
-  exercise_count: 9
+  practice_count: 9
   due_date: 
-  created_at: 2012-10-14 08:16:55.508206000 Z
-  updated_at: 2012-10-14 08:16:55.508206000 Z
+  created_at: 2012-10-14 13:20:32.820017000 Z
+  updated_at: 2012-10-14 13:20:32.820017000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_1/Circuit_Analysis_Toolchest/
   score_count: 39
+  duration: 0
+  type: Lecture
 :38:
   id: 38
   chapter_id: 10
   title: Week 1 Tutorials
-  exercise_count: 0
+  practice_count: 0
   due_date: 
-  created_at: 2012-10-14 08:16:55.511510000 Z
-  updated_at: 2012-10-14 08:16:55.511510000 Z
+  created_at: 2012-10-14 13:20:32.986610000 Z
+  updated_at: 2012-10-14 13:20:32.986610000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_1/Week_1_Tutorials/
   score_count: 
+  duration: 0
+  type: Lecture
 :39:
   id: 39
   chapter_id: 10
   title: Homework 1
-  exercise_count: 3
+  practice_count: 
   due_date: 2012-09-16 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:55.516429000 Z
-  updated_at: 2012-10-14 08:16:55.516429000 Z
+  created_at: 2012-10-14 13:20:33.164314000 Z
+  updated_at: 2012-10-14 13:20:33.164314000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_1/Basic_Circuit_Analysis/
-  score_count: 22
+  score_count: 
+  duration: 
+  type: Assignment
 :40:
   id: 40
   chapter_id: 10
   title: Lab 1
-  exercise_count: 1
+  practice_count: 
   due_date: 2012-09-16 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:55.520015000 Z
-  updated_at: 2012-10-14 08:16:55.520015000 Z
+  created_at: 2012-10-14 13:20:33.361498000 Z
+  updated_at: 2012-10-14 13:20:33.361498000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_1/Resistor_Divider/
-  score_count: 2
+  score_count: 
+  duration: 
+  type: Assignment
 :41:
   id: 41
   chapter_id: 11
   title: Linearity and Superposition
-  exercise_count: 6
+  practice_count: 6
   due_date: 
-  created_at: 2012-10-14 08:16:55.525855000 Z
-  updated_at: 2012-10-14 08:16:55.525855000 Z
+  created_at: 2012-10-14 13:20:33.645428000 Z
+  updated_at: 2012-10-14 13:20:33.645428000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_2/Linearity_and_Superposition/
   score_count: 19
+  duration: 0
+  type: Lecture
 :42:
   id: 42
   chapter_id: 11
   title: Static Discipline and Boolean Logic
-  exercise_count: 2
+  practice_count: 2
   due_date: 
-  created_at: 2012-10-14 08:16:55.528896000 Z
-  updated_at: 2012-10-14 08:16:55.528896000 Z
+  created_at: 2012-10-14 13:20:33.811491000 Z
+  updated_at: 2012-10-14 13:20:33.811491000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_2/Static_Discipline_and_Boolean_Logic/
   score_count: 9
+  duration: 0
+  type: Lecture
 :43:
   id: 43
   chapter_id: 11
   title: Week 2 Tutorials
-  exercise_count: 0
+  practice_count: 0
   due_date: 
-  created_at: 2012-10-14 08:16:55.533022000 Z
-  updated_at: 2012-10-14 08:16:55.533022000 Z
+  created_at: 2012-10-14 13:20:33.994731000 Z
+  updated_at: 2012-10-14 13:20:33.994731000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_2/Week_2_Tutorials/
   score_count: 
+  duration: 0
+  type: Lecture
 :44:
   id: 44
   chapter_id: 11
   title: Homework 2
-  exercise_count: 3
+  practice_count: 
   due_date: 2012-09-30 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:55.536065000 Z
-  updated_at: 2012-10-14 08:16:55.536065000 Z
+  created_at: 2012-10-14 13:20:34.161891000 Z
+  updated_at: 2012-10-14 13:20:34.161891000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_2/Linearity_Thevenin_and_Norton_Digital/
-  score_count: 12
+  score_count: 
+  duration: 
+  type: Assignment
 :45:
   id: 45
   chapter_id: 11
   title: Lab 2
-  exercise_count: 1
+  practice_count: 
   due_date: 2012-09-30 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:55.539210000 Z
-  updated_at: 2012-10-14 08:16:55.539210000 Z
+  created_at: 2012-10-14 13:20:34.328204000 Z
+  updated_at: 2012-10-14 13:20:34.328204000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_2/Mixing_Two_Signals/
-  score_count: 1
+  score_count: 
+  duration: 
+  type: Assignment
 :46:
   id: 46
   chapter_id: 12
   title: Inside the Gate
-  exercise_count: 3
+  practice_count: 3
   due_date: 
-  created_at: 2012-10-14 08:16:55.545452000 Z
-  updated_at: 2012-10-14 08:16:55.545452000 Z
+  created_at: 2012-10-14 13:20:34.662027000 Z
+  updated_at: 2012-10-14 13:20:34.662027000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_3/Inside_the_Gate/
   score_count: 16
+  duration: 0
+  type: Lecture
 :47:
   id: 47
   chapter_id: 12
   title: Circuits with Nonlinear Elements
-  exercise_count: 4
+  practice_count: 4
   due_date: 
-  created_at: 2012-10-14 08:16:55.549202000 Z
-  updated_at: 2012-10-14 08:16:55.549202000 Z
+  created_at: 2012-10-14 13:20:34.828369000 Z
+  updated_at: 2012-10-14 13:20:34.828369000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_3/Circuits_with_Nonlinear_Elements/
   score_count: 14
+  duration: 0
+  type: Lecture
 :48:
   id: 48
   chapter_id: 12
   title: Week 3 Tutorials
-  exercise_count: 0
+  practice_count: 0
   due_date: 
-  created_at: 2012-10-14 08:16:55.552503000 Z
-  updated_at: 2012-10-14 08:16:55.552503000 Z
+  created_at: 2012-10-14 13:20:34.994629000 Z
+  updated_at: 2012-10-14 13:20:34.994629000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_3/Week_3_Tutorials/
   score_count: 
+  duration: 0
+  type: Lecture
 :49:
   id: 49
   chapter_id: 12
   title: Homework 3
-  exercise_count: 4
+  practice_count: 
   due_date: 2012-09-30 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:55.555703000 Z
-  updated_at: 2012-10-14 08:16:55.555703000 Z
+  created_at: 2012-10-14 13:20:35.161759000 Z
+  updated_at: 2012-10-14 13:20:35.161759000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_3/Digital_and_Nonlinear/
-  score_count: 20
+  score_count: 
+  duration: 
+  type: Assignment
 :50:
   id: 50
   chapter_id: 12
   title: Lab 3
-  exercise_count: 1
+  practice_count: 
   due_date: 2012-09-30 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:55.558633000 Z
-  updated_at: 2012-10-14 08:16:55.558633000 Z
+  created_at: 2012-10-14 13:20:35.328101000 Z
+  updated_at: 2012-10-14 13:20:35.328101000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_3/Logic_Gate_Implementation/
-  score_count: 1
+  score_count: 
+  duration: 
+  type: Assignment
 :51:
   id: 51
   chapter_id: 13
   title: Incremental Analysis
-  exercise_count: 3
+  practice_count: 3
   due_date: 
-  created_at: 2012-10-14 08:16:55.564228000 Z
-  updated_at: 2012-10-14 08:16:55.564228000 Z
+  created_at: 2012-10-14 13:20:35.679041000 Z
+  updated_at: 2012-10-14 13:20:35.679041000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_4/Incremental_Analysis/
   score_count: 9
+  duration: 0
+  type: Lecture
 :52:
   id: 52
   chapter_id: 13
   title: Dependent Sources and Amplifiers
-  exercise_count: 3
+  practice_count: 3
   due_date: 
-  created_at: 2012-10-14 08:16:55.567539000 Z
-  updated_at: 2012-10-14 08:16:55.567539000 Z
+  created_at: 2012-10-14 13:20:35.836516000 Z
+  updated_at: 2012-10-14 13:20:35.836516000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_4/Dependent_Sources_and_Amplifiers/
   score_count: 5
+  duration: 0
+  type: Lecture
 :53:
   id: 53
   chapter_id: 13
   title: Week 4 Tutorials
-  exercise_count: 0
+  practice_count: 0
   due_date: 
-  created_at: 2012-10-14 08:16:55.570717000 Z
-  updated_at: 2012-10-14 08:16:55.570717000 Z
+  created_at: 2012-10-14 13:20:35.986616000 Z
+  updated_at: 2012-10-14 13:20:35.986616000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_4/Week_4_Tutorials/
   score_count: 
+  duration: 0
+  type: Lecture
 :54:
   id: 54
   chapter_id: 13
   title: Homework 4
-  exercise_count: 3
+  practice_count: 
   due_date: 2012-10-07 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:55.574069000 Z
-  updated_at: 2012-10-14 08:16:55.574069000 Z
+  created_at: 2012-10-14 13:20:36.136764000 Z
+  updated_at: 2012-10-14 13:20:36.136764000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_4/Incremental_and_Amplifiers/
-  score_count: 17
+  score_count: 
+  duration: 
+  type: Assignment
 :55:
   id: 55
   chapter_id: 13
   title: Lab 4
-  exercise_count: 1
+  practice_count: 
   due_date: 2012-10-07 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:55.577398000 Z
-  updated_at: 2012-10-14 08:16:55.577398000 Z
+  created_at: 2012-10-14 13:20:36.286795000 Z
+  updated_at: 2012-10-14 13:20:36.286795000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_4/Curve_Tracer/
-  score_count: 4
+  score_count: 
+  duration: 
+  type: Assignment
 :56:
   id: 56
   chapter_id: 14
   title: ! 'MOSFETs: Large Signals'
-  exercise_count: 3
+  practice_count: 3
   due_date: 
-  created_at: 2012-10-14 08:16:55.619577000 Z
-  updated_at: 2012-10-14 08:16:55.619577000 Z
+  created_at: 2012-10-14 13:20:36.612047000 Z
+  updated_at: 2012-10-14 13:20:36.612047000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_5/MOSFETs_Large_Signals/
   score_count: 6
+  duration: 0
+  type: Lecture
 :57:
   id: 57
   chapter_id: 14
   title: ! 'MOSFET Amplifiers: Small signal model'
-  exercise_count: 3
+  practice_count: 3
   due_date: 
-  created_at: 2012-10-14 08:16:55.622736000 Z
-  updated_at: 2012-10-14 08:16:55.622736000 Z
+  created_at: 2012-10-14 13:20:36.778249000 Z
+  updated_at: 2012-10-14 13:20:36.778249000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_5/MOSFET_Amplifiers_Small_signal_model/
   score_count: 5
+  duration: 0
+  type: Lecture
 :58:
   id: 58
   chapter_id: 14
   title: Week 5 Tutorials
-  exercise_count: 0
+  practice_count: 0
   due_date: 
-  created_at: 2012-10-14 08:16:55.625632000 Z
-  updated_at: 2012-10-14 08:16:55.625632000 Z
+  created_at: 2012-10-14 13:20:36.944540000 Z
+  updated_at: 2012-10-14 13:20:36.944540000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_5/Week_5_Tutorials/
   score_count: 
+  duration: 0
+  type: Lecture
 :59:
   id: 59
   chapter_id: 14
   title: Homework 5
-  exercise_count: 3
+  practice_count: 
   due_date: 2012-10-14 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:55.628624000 Z
-  updated_at: 2012-10-14 08:16:55.628624000 Z
+  created_at: 2012-10-14 13:20:37.111576000 Z
+  updated_at: 2012-10-14 13:20:37.111576000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_5/MOSFETs/
-  score_count: 13
+  score_count: 
+  duration: 
+  type: Assignment
 :60:
   id: 60
   chapter_id: 14
   title: Lab 5
-  exercise_count: 1
+  practice_count: 
   due_date: 2012-10-14 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:55.632210000 Z
-  updated_at: 2012-10-14 08:16:55.632210000 Z
+  created_at: 2012-10-14 13:20:37.302966000 Z
+  updated_at: 2012-10-14 13:20:37.302966000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_5/Mosfet_Amplifier/
-  score_count: 4
+  score_count: 
+  duration: 
+  type: Assignment
 :61:
   id: 61
   chapter_id: 15
   title: Small-Signal Circuit Models
-  exercise_count: 3
+  practice_count: 3
   due_date: 
-  created_at: 2012-10-14 08:16:55.638308000 Z
-  updated_at: 2012-10-14 08:16:55.638308000 Z
+  created_at: 2012-10-14 13:20:37.628598000 Z
+  updated_at: 2012-10-14 13:20:37.628598000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_6/Small-Signal_Circuit_Models/
   score_count: 6
+  duration: 0
+  type: Lecture
 :62:
   id: 62
   chapter_id: 15
   title: Capacitors and First-Order Circuits
-  exercise_count: 5
+  practice_count: 5
   due_date: 
-  created_at: 2012-10-14 08:16:55.641533000 Z
-  updated_at: 2012-10-14 08:16:55.641533000 Z
+  created_at: 2012-10-14 13:20:37.811393000 Z
+  updated_at: 2012-10-14 13:20:37.811393000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_6/Capacitors_and_First-Order_Circuits/
   score_count: 11
+  duration: 0
+  type: Lecture
 :63:
   id: 63
   chapter_id: 15
   title: Week 6 Tutorials
-  exercise_count: 0
+  practice_count: 0
   due_date: 
-  created_at: 2012-10-14 08:16:55.644297000 Z
-  updated_at: 2012-10-14 08:16:55.644297000 Z
+  created_at: 2012-10-14 13:20:37.994668000 Z
+  updated_at: 2012-10-14 13:20:37.994668000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_6/Week_6_Tutorials/
   score_count: 
+  duration: 0
+  type: Lecture
 :64:
   id: 64
   chapter_id: 15
   title: Homework 6
-  exercise_count: 3
+  practice_count: 
   due_date: 2012-10-21 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:55.647371000 Z
-  updated_at: 2012-10-14 08:16:55.647371000 Z
+  created_at: 2012-10-14 13:20:38.179670000 Z
+  updated_at: 2012-10-14 13:20:38.179670000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_6/Homework_6/
-  score_count: 16
+  score_count: 
+  duration: 
+  type: Assignment
 :65:
   id: 65
   chapter_id: 15
   title: Lab 6
-  exercise_count: 1
+  practice_count: 
   due_date: 2012-10-21 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:55.650886000 Z
-  updated_at: 2012-10-14 08:16:55.650886000 Z
+  created_at: 2012-10-14 13:20:38.336333000 Z
+  updated_at: 2012-10-14 13:20:38.336333000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_6/Propagation_Delay/
-  score_count: 7
+  score_count: 
+  duration: 
+  type: Assignment
 :66:
   id: 66
   chapter_id: 16
   title: Inductors and First-Order Circuits
-  exercise_count: 4
+  practice_count: 4
   due_date: 
-  created_at: 2012-10-14 08:16:55.658136000 Z
-  updated_at: 2012-10-14 08:16:55.658136000 Z
+  created_at: 2012-10-14 13:20:38.845236000 Z
+  updated_at: 2012-10-14 13:20:38.845236000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_7/Inductors_and_First-Order_Circuits/
   score_count: 9
+  duration: 0
+  type: Lecture
 :67:
   id: 67
   chapter_id: 16
   title: Speed of Digital Circuits
-  exercise_count: 4
+  practice_count: 4
   due_date: 
-  created_at: 2012-10-14 08:16:55.661120000 Z
-  updated_at: 2012-10-14 08:16:55.661120000 Z
+  created_at: 2012-10-14 13:20:39.021027000 Z
+  updated_at: 2012-10-14 13:20:39.021027000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_7/Speed_of_Digital_Circuits/
   score_count: 5
+  duration: 0
+  type: Lecture
 :68:
   id: 68
   chapter_id: 16
   title: Week 7 Tutorials
-  exercise_count: 0
+  practice_count: 0
   due_date: 
-  created_at: 2012-10-14 08:16:55.664170000 Z
-  updated_at: 2012-10-14 08:16:55.664170000 Z
+  created_at: 2012-10-14 13:20:39.161379000 Z
+  updated_at: 2012-10-14 13:20:39.161379000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_7/Week_7_Tutorials/
   score_count: 
+  duration: 0
+  type: Lecture
 :69:
   id: 69
   chapter_id: 16
   title: Homework 7
-  exercise_count: 3
+  practice_count: 
   due_date: 2012-11-04 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:55.667314000 Z
-  updated_at: 2012-10-14 08:16:55.667314000 Z
+  created_at: 2012-10-14 13:20:39.278292000 Z
+  updated_at: 2012-10-14 13:20:39.278292000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_7/Homework_937/
-  score_count: 10
+  score_count: 
+  duration: 
+  type: Assignment
 :70:
   id: 70
   chapter_id: 16
   title: Lab 7
-  exercise_count: 1
+  practice_count: 
   due_date: 2012-11-04 00:00:00.000000000 Z
-  created_at: 2012-10-14 08:16:55.670795000 Z
-  updated_at: 2012-10-14 08:16:55.670795000 Z
+  created_at: 2012-10-14 13:20:39.495217000 Z
+  updated_at: 2012-10-14 13:20:39.495217000 Z
   url: https://edx.org/courses/MITx/6.002x/2012_Fall/courseware/Week_7/Capacitors_and_Energy_Storage/
-  score_count: 6
+  score_count: 
+  duration: 
+  type: Assignment

@@ -1,5 +1,5 @@
 class Section < ActiveRecord::Base
-  attr_accessible :due_date, :exercise_count, :title, :chapter
+  attr_accessible :title, :url, :chapter
 
   belongs_to :chapter
 end

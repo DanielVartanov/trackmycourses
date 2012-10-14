@@ -10,6 +10,11 @@ class Course < ActiveRecord::Base
     Date.today >= start_date
   end
 
+  def chapter_at_week(week)
+    chapter_number = week - start_date.cweek + 1
+    self.chapters.find_by_number chapter_number
+  end
+
   def as_json(options={})
     super :include => :platform
   end

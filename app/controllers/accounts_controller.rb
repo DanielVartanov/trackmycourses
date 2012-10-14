@@ -5,12 +5,10 @@ class AccountsController < ApplicationController
     if account.nil?
       account = Account.create! :course_ids => session[:course_ids], :uid => oauth_data['uid'], :twitter_username => oauth_data['info']['nickname']
     end
-    
+
     sign_in_as account
 
-    puts session.inspect
-    
-    redirect_to dashboard_index_path
+    redirect_to dashboard_index_url protocol: 'http'
   end
 
   protected
