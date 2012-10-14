@@ -29,6 +29,15 @@ class AccountsController < ApplicationController
     redirect_to root_url protocol: 'http'
   end
 
+  def subscribe
+    if logged_in?
+      current_user.toggle! :twitter_notify
+    end
+    respond_to do |format|
+      format.js
+    end
+  end
+
   protected
 
   def find_account
