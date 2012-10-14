@@ -745,7 +745,7 @@ div.orbit-wrapper {
           height: 13px;
           width: 9px;
           display: inline-block;
-          background: url("/images/date_arrows.png") no-repeat 0 0;
+          background: url("/images/arrows.png") no-repeat 0 0;
         }
       }      
     }
@@ -781,12 +781,13 @@ div.orbit-wrapper {
           height: 13px;
           width: 9px;
           display: inline-block;
-          background: url("/images/date_arrows.png") no-repeat -9px 0;
+          background: url("/images/arrows.png") no-repeat -9px 0;
         }
       }
     }
   }
   #summary {
+    background: #f9f9f9;
     border: 1px solid #c5c5c5;
     padding: 10px;
     text-align: center;
@@ -831,6 +832,110 @@ div.orbit-wrapper {
     .assigments, .practicies {
       h3{
         margin: 55px 0 0;
+      }
+    }
+  }
+  #cources {
+    article {
+      border: 1px solid #c8c8c8;
+      box-shadow: 1px 1px 1px #c8c8c8;
+      margin-bottom: 22px;
+      background: #f9f9f9;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        height: 7px;
+        width: 12px;
+        right: 9px;
+        top: 17px;
+        background: url("/images/arrows.png") no-repeat 0 -14px;
+        cursor: pointer;
+      }
+      &.collapsed {
+        max-height: 43px;
+        overflow: hidden;
+        &:after {
+          height: 13px;
+          width: 9px;
+          right: 10px;
+          top: 14px;
+          background: url("/images/arrows.png") no-repeat 0 0;
+        }
+      }
+      &.coursera, &.edx {
+        &:before {
+          content: "";
+          outline: 1px solid #c8c8c8;
+          border-right: 1px solid white;
+          border-bottom: 1px solid white;
+          width: 90px;
+          height: 40px;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+      &.coursera {
+        &:before {
+          background: url("/images/coursera_label_mini.png") no-repeat center center,
+            -ms-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
+          background: url("/images/coursera_label_mini.png") no-repeat center center,
+            -moz-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
+          background: url("/images/coursera_label_mini.png") no-repeat center center,
+            -o-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
+          background: url("/images/coursera_label_mini.png") no-repeat center center,
+            -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #D7D7D7));
+          background: url("/images/coursera_label_mini.png") no-repeat center center,
+            -webkit-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
+          background: url("/images/coursera_label_mini.png") no-repeat center center,
+            linear-gradient(to bottom, #FFFFFF 0%, #D7D7D7 100%);
+        }
+      }
+      &.edx {
+        &:before {
+          background: url("/images/edx_label_mini.png") no-repeat center center,
+            -ms-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
+          background: url("/images/edx_label_mini.png") no-repeat center center,
+            -moz-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
+          background: url("/images/edx_label_mini.png") no-repeat center center,
+            -o-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
+          background: url("/images/edx_label_mini.png") no-repeat center center,
+            -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #D7D7D7));
+          background: url("/images/edx_label_mini.png") no-repeat center center,
+            -webkit-linear-gradient(top, #FFFFFF 0%, #D7D7D7 100%);
+          background: url("/images/edx_label_mini.png") no-repeat center center,
+            linear-gradient(to bottom, #FFFFFF 0%, #D7D7D7 100%);
+        }
+      }
+      h1 {
+        font-weight: normal;
+        font-size: 1.4em;
+        margin: 10px 0 10px 104px;
+        color: #3c3c3c;
+        cursor: pointer;
+      }
+      .lectures, .assigments {
+        padding: 18px;
+        h2 {
+          font-family: Tahoma, Arial;
+          font-style: normal;
+          font-size: 1.4em;
+          color: #b9b9b9;
+          margin-bottom: 20px;
+        }
+        ul {
+          li {
+            list-style-type: none;
+            margin-bottom: 16px;
+            font-size: 1.2em;
+            .info {
+              display: block;
+              color: #757575;
+              font-size: 0.8em;
+            }
+          }
+        }
       }
     }
   }

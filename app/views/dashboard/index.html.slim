@@ -37,23 +37,24 @@
                   |  assigments
 
           #cources
-            - 5.times do 
-              article.coursera
+            - 5.times do |i|
+              article class="#{i > 1 ? 'collapsed edx' : 'coursera' }"
                 h1 Lorem ipsum dolor sit amet, consectetur adipisicing elit
                 .row
                   .six.columns
-                    h2 Lectures
-                    ul.lectures
-                    - 2.times do
-                      li 
-                        | Duis aute irure dolor in 
-                        span.info (01:45) Practicies: 2
+                    .lectures
+                      h2 Lectures
+                      ul
+                        - 2.times do
+                          li 
+                            | Duis aute irure dolor in 
+                            span.info (01:45) Practicies: 2
 
                   .six.columns
-                    h2 Assigments 
-                    ul.assigments
-                      li
-                        | Excepteur sint occaecat
+                    .assigments
+                      h2 Assigments 
+                      ul
+                        li Excepteur sint occaecat
 
         .three.columns.sidebar
           = link_to "My courses", account_subscriptions_path, class: "bigbutton back"
