@@ -6,9 +6,9 @@ gem 'backbone-on-rails'
 gem 'jquery-rails'
 gem 'slim'
 gem 'jbuilder'
+gem 'mechanize'
 
 group :development do
-  gem 'mechanize'
   gem 'nokogiri-pretty'
   gem 'hirb'
   gem 'sqlite3'
