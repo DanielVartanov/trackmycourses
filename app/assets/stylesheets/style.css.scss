@@ -1,7 +1,7 @@
 html, body {
   background: 
-    url("/images/glow.png") no-repeat top center,
-    url("/images/background.png");
+  url("/images/glow.png") no-repeat top center,
+  url("/images/background.png");
   font-family: Tahoma, Arial;
 }
 
@@ -279,18 +279,64 @@ div.orbit-wrapper {
     left: 0;
     bottom: -2px;
   }
-  .three {
+  .sidebar {
     padding: 0;
   }
   .bigbutton {
     padding: 10px 0;
-    margin-bottom: 20px;
+    margin-bottom: 37px;
   }
   h2 {
     font-style: italic;
     font-family: "Georgia", Arial;
     font-weight: normal;
     font-size: 2em;
-    margin: 0 0 30px;
+    margin: 0 0 27px;
+  }
+  #search {
+    margin-bottom: 40px;
+    input[type="text"] {
+      position: relative;
+      margin-top: 4px;
+      font-family: "Georgia", Arial;
+      font-style: italic;
+      font-size: 1.4em;
+      border: 1px solid #bdbdbd;
+      border-radius: 5px;
+      height: 40px;
+      padding: 0 40px 0 10px;
+      background: white;
+    }
+    input[type="submit"] {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 9px;
+      height: 30px;
+      width: 30px;
+      background: url("/images/find.png");
+      text-indent: -9999px;
+      border: none;
+      cursor: pointer;
+    }
+    input:focus {
+      outline: none;
+    }
+    ::-webkit-input-placeholder {
+      font-style: italic;
+      color: #ddd;
+    }
+    ::-webkit-textarea-placeholder {
+      font-style: italic;
+      color: #ddd;
+    }
+    :-ms-input-placeholder {
+      font-style: italic;
+      color: #ddd;
+    } 
+    input:-moz-placeholder, textarea:-moz-placeholder {
+      font-style: italic;
+      color: #ddd;
+    } 
   }
 }

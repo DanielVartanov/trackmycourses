@@ -4,18 +4,16 @@
       h2 Choose your courses to track
       .row
         .nine.columns 
-          .row.collapse 
-            .eight.mobile-three.columns 
-              input type="text"
-            .four.mobile-one.columns 
-              a.postfix.button.expand href="#" Search
+          form#search
+            input type="text" placeholder="Find your course..."
+            input type="submit"
           ul.block-grid.two-up.course-list
             - 5.times do
               li
                 article
                   h1 sample optional course
 
-        .three.columns
+        .three.columns.sidebar
           = link_to "Go to dashboard", dashboard_index_path, class: "bigbutton"
           .my-courses
             .header
