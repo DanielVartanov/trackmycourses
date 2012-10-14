@@ -46,7 +46,7 @@
               h2 
                 | Accounts 
                 - if controller.__send__ :logged_in?    
-                  a.sign_out href="#" Sign out
+                  a.sign_out href="#{sign_out_account_url protocol: 'http'}" Sign out
             ul.accounts
               li.twitter class="#{'connected' if controller.__send__ :logged_in?}"
 
