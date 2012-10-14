@@ -11,10 +11,6 @@ class TrackMyCourses.Views.DashboardPage extends Backbone.View
     @weekSummaryView = new TrackMyCourses.Views.WeekSummaryView()
     @chaptersView = new TrackMyCourses.Views.ChaptersView()
 
-    
-    $("article h1").click ->
-      $(this).parent().toggleClass "collapsed"
-
   weekChanged: (week) ->
     @week.fetch data: {week: week}, success: @weekFetched
 
