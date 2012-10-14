@@ -957,3 +957,8 @@ div.orbit-wrapper {
 .sign_out {
   text-align: right;
 }
+#subscribe {
+  &:before{
+    content: none;
+  }
+}

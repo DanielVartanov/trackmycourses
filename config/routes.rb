@@ -4,6 +4,7 @@ TrackMyCourses::Application.routes.draw do
 
   resource :account do
     get :sign_out, on: :member
+    get :subscribe, on: :member
     resources :subscriptions
   end
 

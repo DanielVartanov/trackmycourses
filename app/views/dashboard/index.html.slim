@@ -52,7 +52,11 @@
 
                 - if controller.__send__ :logged_in? 
                   - if (controller.__send__ :current_user).authenticated_with?('twitter')
-                    span = (controller.__send__ :current_user).authentications.find_by_provider('twitter').nickname
+                    span 
+                      = (controller.__send__ :current_user).authentications.find_by_provider('twitter').nickname
+                      |  (
+                      a#subscribe href="#{subscribe_account_path}" data-remote="true" #{(controller.__send__ :current_user).twitter_notify ? "unsubscribe" : "subscribe"}
+                      | )
                     / a.remove href="#" remove
                   - else
                     a href="/auth/twitter" title="Sign in with twitter" Connect
