@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'spec_helper'
 
 
@@ -15,7 +16,7 @@ describe DashboardController, :type => :controller do
       end
 
       it 'should return total count for two courses' do
-        get :index, week: 38
+        get :index, week: 38, format: :json
         
         response_json["total_lecture_count"].should == 5
         response_json["total_practice_count"].should == 11
@@ -36,7 +37,7 @@ describe DashboardController, :type => :controller do
       end
 
       it 'should return nulls if there are no started courses' do
-        get :index, week: 35
+        get :index, week: 35, format: :json
 
         response_json["total_lecture_count"].should == 0
         response_json["total_practice_count"].should == 0
