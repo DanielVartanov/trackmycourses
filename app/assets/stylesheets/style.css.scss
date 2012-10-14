@@ -667,7 +667,7 @@ div.orbit-wrapper {
             }
           }
         }
-        a {
+        a, span {
           opacity: 0.5;
           &:before {
             content: "";
@@ -683,9 +683,12 @@ div.orbit-wrapper {
           a {
             opacity: 1;
           }
+          .not-supported{
+            opacity: 0.5;
+          }
         }
         &.github {
-          a {
+          a, span {
             &:before {
               width: 51px;
               margin-bottom: -7px;
@@ -694,21 +697,21 @@ div.orbit-wrapper {
           }
         }
         &.facebook {
-          a {
+          a, span {
             &:before {
               background-position: -57px 0;
             }
           }
         }
         &.google {
-          a {
+          a, span {
             &:before {
               background-position: -89px 0;
             }
           }
         }
         &.twitter {
-          a {
+          a, span {
             &:before {
               background-position: -120px 0;
             }
@@ -838,7 +841,8 @@ div.orbit-wrapper {
       }
     }
   }
-  #cources {
+
+  #chapters {
     article {
       border: 1px solid #c8c8c8;
       box-shadow: 1px 1px 1px #c8c8c8;
@@ -949,4 +953,7 @@ div.orbit-wrapper {
   &:hover {
     opacity: 0.4;
   }
+}
+.sign_out {
+  text-align: right;
 }

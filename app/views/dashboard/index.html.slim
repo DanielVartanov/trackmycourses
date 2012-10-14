@@ -27,7 +27,7 @@
                 h3 
                   em 10
                   |  lectures
-                h5 (6 hrs. 40 minutes)
+                / h5 (6 hrs. 40 minutes)
               .four.columns.practicies
                 h3
                   em 10
@@ -37,35 +37,43 @@
                   em 4
                   |  assigments
 
-          #cources
-            - 5.times do |i|
-              article class="#{i > 1 ? 'edx' : 'coursera' }"
-                h1 Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                .row
-                  .six.columns
-                    .lectures
-                      h2 Lectures
-                      ul
-                        - 2.times do
-                          li 
-                            | Duis aute irure dolor in 
-                            span.info (01:45) Practicies: 2
+          #chapters
+            / - 5.times do |i|
+            /   article class="#{i > 1 ? 'edx' : 'coursera' }"
+            /     h1 Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            /     .row
+            /       .six.columns
+            /         .lectures
+            /           h2 Lectures
+            /           ul
+            /             - 2.times do
+            /               li 
+            /                 | Duis aute irure dolor in 
+            /                 span.info (01:45) Practicies: 2
 
-                  .six.columns
-                    .assigments
-                      h2 Assigments 
-                      ul
-                        li Excepteur sint occaecat
+            /       .six.columns
+            /         .assigments
+            /           h2 Assigments 
+            /           ul
+            /             li Excepteur sint occaecat
 
         .three.columns.sidebar
           = link_to "My courses", account_subscriptions_path, class: "bigbutton back"
           .my-accounts
             .header
-              h2 Accounts          
+              h2 
+                | Accounts 
+                - if controller.__send__ :logged_in?    
+                  a.sign_out href="#" Sign out
             ul.accounts
-              li.twitter.connected
-                a href="/auth/twitter" Joseph Shekelman
-                a.remove href="#" remove
+              li.twitter class="#{'connected' if controller.__send__ :logged_in?}"
+
+                - if controller.__send__ :logged_in?
+                  span = (controller.__send__ :current_user).twitter_username
+                  / a.remove href="#" remove
+                - else
+                  a href="/auth/twitter" Connect
+
               li.github
                 a.not-supported href="#" title="Sorry, not supported yet" Not supported yet
                 a.remove href="#" remove
@@ -75,4 +83,4 @@
               li.facebook
                 a.not-supported href="#" title="Sorry, not supported yet" Not supported yet
                 a.remove href="#" remove              
-              li Connect your network account to be able to save and manage your courses
+              li Connect your Twitter account to access your dashboard from other devices
