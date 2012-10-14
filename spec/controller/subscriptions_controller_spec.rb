@@ -7,7 +7,6 @@ describe SubscriptionsController, :type => :controller do
     let(:pharmacy) { Course.create! }
     
     describe "#create" do
-      
       context 'anonymous user creates a subscrtipion' do
         before do
           post :create, :course_ids => [circuits.id]
@@ -32,9 +31,51 @@ describe SubscriptionsController, :type => :controller do
           end
         end
       end
+
+      context 'a signed in user created a subscription' do
+        let(:current_user) { Account.create! }
+        
+        before do
+          session[:user_id] = current_user.id
+        end
+        
+        before do
+          post :create, :course_ids => [circuits.id]
+        end
+
+        it "should create subscription" do
+          current_user.courses.should == [circuits]
+        end
+
+        context 'that user updates the subscription' do
+          before do
+            post :create, :course_ids => [chemistry.id, pharmacy.id]
+          end
+
+          it "should update course list in the session" do
+            current_user.courses.should == [chemistry, pharmacy]
+          end
+        end
+      end
     end
     
     describe "#index" do
+      context 'when user is signed in' do
+        let(:current_user) { Account.create! :course_ids => [circuits.id, pharmacy.id] }
+        
+        before do
+          session[:user_id] = current_user.id
+        end
+
+        before do
+          get :index, :format => :json
+        end
+
+        it 'should return user subscriptions' do
+          response_json.should == { 'course_ids' => [circuits.id, pharmacy.id] }
+        end
+      end
+      
       context 'given anonymous user has created some subscriptions' do
         before do
           post :create, :course_ids => [chemistry.id, pharmacy.id]
