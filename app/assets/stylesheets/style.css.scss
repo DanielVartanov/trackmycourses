@@ -228,7 +228,7 @@ footer {
     color: #2785c0;
     
     &:before {
-      content: " ";
+      content: "";
       border-radius: 0 0 6px 6px;
       position: absolute;
       bottom: 0;
@@ -242,6 +242,42 @@ footer {
       background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 477, color-stop(0, #FFFFFF), color-stop(1, rgba(255,255,255,0)));
       background-image: -webkit-radial-gradient(center bottom, ellipse farthest-side, #FFFFFF 0%, rgba(255,255,255,0) 100%);
       background-image: radial-gradient(ellipse farthest-side at center bottom, #FFFFFF 0%, rgba(255,255,255,0) 100%);
+    }
+  }
+  &.back{
+    &:before {
+      content: "← ";
+      font-family: Arial;
+      font-weight: bold;
+      position: relative;
+      display: inline;
+      background-image: none;
+    }
+    &:after {
+      content: none;
+    }
+    &:hover {
+      color: #2785c0;
+      &:before {
+        position: inline;
+        background-image: none;
+      }
+      &:after {
+        content: "";
+        border-radius: 0 0 6px 6px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 40%;
+        width: 100%;
+
+        background-image: -ms-radial-gradient(center bottom, ellipse farthest-side, #FFFFFF 0%, rgba(255,255,255,0) 100%);
+        background-image: -moz-radial-gradient(center bottom, ellipse farthest-side, #FFFFFF 0%, rgba(255,255,255,0) 100%);
+        background-image: -o-radial-gradient(center bottom, ellipse farthest-side, #FFFFFF 0%, rgba(255,255,255,0) 100%);
+        background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 477, color-stop(0, #FFFFFF), color-stop(1, rgba(255,255,255,0)));
+        background-image: -webkit-radial-gradient(center bottom, ellipse farthest-side, #FFFFFF 0%, rgba(255,255,255,0) 100%);
+        background-image: radial-gradient(ellipse farthest-side at center bottom, #FFFFFF 0%, rgba(255,255,255,0) 100%);
+      }
     }
   }
 }
