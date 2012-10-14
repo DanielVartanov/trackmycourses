@@ -3,8 +3,9 @@
     .row
       .nine.columns
         #slider
-          - 3.times do |i|
-            img src="http://placehold.it/620x366&text=slide" alt="slide_#{i}"
+          img src="/images/slide1.png" alt="slide_1"
+          img src="/images/slide2.png" alt="slide_2"
+          img src="/images/slide3.png" alt="slide_3"
 
       .three.columns.sidebar
         = link_to "Start tracking", account_subscriptions_path, class: "bigbutton"
@@ -14,9 +15,9 @@
             span#network_accounts_trigger network account
           ul#network_accounts
             li: a.twitter href="/auth/twitter" title="Sign in with twitter" twitter
-            li: a.google href="#" title="Sign in with google" google
-            li: a.facebook href="#" title="Sign in with facebook" facebook
-            li: a.github href="#" title="Sign in with github" github
+            li: a.google.not-supported href="#" title="Sorry, not supported yet" google
+            li: a.facebook.not-supported href="#" title="Sorry, not supported yet" facebook
+            li: a.github.not-supported href="#" title="Sorry, not supported yet" github
 
         ul.platforms
           li: a.edx href="https://www.edx.org/" target="_blank" title="edX" edX 

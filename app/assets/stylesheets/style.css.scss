@@ -947,3 +947,9 @@ div.orbit-wrapper {
     }
   }
 }
+.not-supported {
+  opacity: 0.4;
+  &:hover {
+    opacity: 0.4;
+  }
+}
