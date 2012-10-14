@@ -42,6 +42,5 @@ class TrackMyCourses.Views.SubscribedCourses extends Backbone.View
     @subscription.save()
 
   updateCourses: (course) ->
-    console.log course
     if course.get('subscribed')
       @subscribe(course)

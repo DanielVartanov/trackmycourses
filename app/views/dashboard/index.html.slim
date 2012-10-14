@@ -25,37 +25,19 @@
             .row
               .four.columns.lectures
                 h3 
-                  em 10
+                  em 0
                   |  lectures
                 / h5 (6 hrs. 40 minutes)
               .four.columns.practicies
                 h3
-                  em 10
+                  em 0
                   |  practicies
               .four.columns.assigments
                 h3
-                  em 4
+                  em 0
                   |  assigments
 
           #chapters
-            / - 5.times do |i|
-            /   article class="#{i > 1 ? 'edx' : 'coursera' }"
-            /     h1 Lorem ipsum dolor sit amet, consectetur adipisicing elit
-            /     .row
-            /       .six.columns
-            /         .lectures
-            /           h2 Lectures
-            /           ul
-            /             - 2.times do
-            /               li 
-            /                 | Duis aute irure dolor in 
-            /                 span.info (01:45) Practicies: 2
-
-            /       .six.columns
-            /         .assigments
-            /           h2 Assigments 
-            /           ul
-            /             li Excepteur sint occaecat
 
         .three.columns.sidebar
           = link_to "My courses", account_subscriptions_path, class: "bigbutton back"

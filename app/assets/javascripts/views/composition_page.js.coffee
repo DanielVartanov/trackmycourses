@@ -25,16 +25,5 @@ class TrackMyCourses.Views.CompositionPage extends Backbone.View
     subscription.on 'change', @subscribtionChanged
 
   subscribtionChanged: (subscription) ->
-    
     @coursesView.updateCourses(subscription.get('lastChangedCourse'))
     @subscribedCoursesView.updateCourses(subscription.get('lastChangedCourse'))
-
-  # onSubscribe: (course) ->
-
-  #   @subscribedCoursesView.subscribe(course)
-
-  # onUnsubscribe: (course) ->
-  #   course_ids = @subscription.get('course_ids')
-  #   course_ids = _.without(course_ids, course.id)
-  #   @subscription.set 'course_ids', course_ids
-  #   @subscription.save()
