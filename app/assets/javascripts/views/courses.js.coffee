@@ -3,7 +3,7 @@ class TrackMyCourses.Views.Courses extends Backbone.View
 
   initialize: ->
     _.bindAll @
-    @collection.on 'reset', @collectionReset
+    # @collection.on 'reset', @collectionReset
 
   collectionReset: (courses) ->
     @.$el.html ''

@@ -20,3 +20,12 @@ class TrackMyCourses.Views.HomePage extends Backbone.View
       bulletThumbs: false,
       bulletThumbLocation: '',
       fluid: true
+
+    $("#network_accounts_trigger").mouseenter ->
+      $(this).parent().addClass "active"
+      $("#network_accounts").addClass "active"
+
+    $("#network_accounts_block").mouseleave ->
+      $("#network_accounts_trigger").parent().removeClass "active"
+      $("#network_accounts").removeClass "active"
+
