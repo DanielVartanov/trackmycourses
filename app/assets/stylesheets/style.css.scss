@@ -609,9 +609,8 @@ div.orbit-wrapper {
         position: relative;
         display: block;
         list-style-type: none;
-        padding: 10px;
+        padding: 12px;
         border-top: 1px solid #c3c3c3;
-        min-height: 48px;
         text-align: center;
         &:last-child{
           text-align: left;
@@ -637,6 +636,7 @@ div.orbit-wrapper {
           }
         }
         a {
+          opacity: 0.5;
           &:before {
             content: "";
             display: inline-block;
@@ -647,10 +647,16 @@ div.orbit-wrapper {
             margin: 0 15px -6px 0;
           }
         }
+        &:hover {
+          a {
+            opacity: 1;
+          }
+        }
         &.github {
           a {
             &:before {
               width: 51px;
+              margin-bottom: -7px;
               background-position: 0 0;
             }
           }
