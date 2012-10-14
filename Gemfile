@@ -2,8 +2,10 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'backbone-on-rails'
+gem 'jquery-rails'
+gem 'slim'
+gem 'jbuilder'
 
 group :development do
   gem 'mechanize'
@@ -18,16 +20,15 @@ group :development do
   gem 'thin'
 end
 
+group :test do
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+end
+
 group :production do
   # Use unicorn as the app server
   gem 'unicorn'
   gem 'pg'
-end
-
-group :test do
-  gem 'rspec-rails'
-  gem 'database_cleaner'
-  gem 'capybara-webkit'
 end
 
 # Gems used only for assets and not required
@@ -43,15 +44,3 @@ group :assets do
   gem 'zurb-foundation', '~> 3.1.1'
   gem 'ejs', '1.0.0'
 end
-
-gem 'backbone-on-rails'
-gem 'jquery-rails'
-gem 'slim'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-gem 'jbuilder'
-
-

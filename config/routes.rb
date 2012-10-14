@@ -4,5 +4,9 @@ TrackMyCourses::Application.routes.draw do
   resources :courses
   resources :subscriptions
 
+  resource :account do
+    resources :subscriptions
+  end
+
   root :to => 'home#index'
 end
