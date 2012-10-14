@@ -10,8 +10,11 @@
           ul.block-grid.two-up.course-list
             - 5.times do
               li
-                article
+                article.coursera
+                  .illustration style="background-image: url('http://placehold.it/350x240&text=course+logo')"
+                    img src="http://placehold.it/350x240&text=course+logo"
                   h1 sample optional course
+                  a.add href="#" track it!
 
         .three.columns.sidebar
           = link_to "Go to dashboard", dashboard_index_path, class: "bigbutton"
@@ -20,5 +23,8 @@
               h2 My courses          
             #selected_courses
               - 5.times do
-                article
+                article.coursera
+                  .illustration style="background-image: url('http://placehold.it/350x240&text=course+logo')"
+                    img src="http://placehold.it/350x240&text=course+logo"
                   h1 sample selected course
+                  a.remove href="#" remove
