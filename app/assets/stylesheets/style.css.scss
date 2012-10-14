@@ -460,6 +460,8 @@ div.orbit-wrapper {
         right: 10px;
         font-size: 1.4em;
         color: #4e930e;
+        cursor: pointer;
+
         &:before{
           content: "";
           position: absolute;
@@ -516,6 +518,7 @@ div.orbit-wrapper {
           color: #454545;
         }
         .remove{
+          cursor: pointer;
           display: none;
           position: absolute;
           height: 19px;
