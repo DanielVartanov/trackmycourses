@@ -197,8 +197,6 @@ footer {
     }
   }
 }
-
-
 .bigbutton {
   position: relative;
   display: inline-block;
@@ -332,6 +330,7 @@ div.orbit-wrapper {
   border-top: 1px solid #adadad;
   border-bottom: 1px solid #adadad;
   box-shadow: inset 0 2px 3px #dedede;
+  min-height: 600px;
   &:after{
     content: "";
     position: absolute;
@@ -626,9 +625,6 @@ div.orbit-wrapper {
     left: 0;
     bottom: -2px;
   }
-  .sidebar {
-    padding: 0 0 0 15px;
-  }
   .my-accounts {
     border-left: 1px solid #c3c3c3;
     .header {
@@ -718,6 +714,123 @@ div.orbit-wrapper {
             }
           }
         }
+      }
+    }
+  }
+  #weeks {
+    margin-bottom: 30px;
+    a {
+      color: #3c3c3c;
+    }
+    .date {
+      display: block;
+      color: #8c8c8c;
+      margin-top: 10px;
+    }
+    .previous {
+      text-align: left;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+      a {
+        margin-left: 16px;
+        display: block;
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 12px;
+          left: -16px;
+          height: 13px;
+          width: 9px;
+          display: inline-block;
+          background: url("/images/date_arrows.png") no-repeat 0 0;
+        }
+      }      
+    }
+    .current {
+      text-align: center;
+      a {
+        color: #8c8c8c;
+        &:hover {
+          color: #3c3c3c;
+        }
+      }
+      .date {
+        font-weight: bold;
+        color: #615f5f;
+        font-size: 1.2em;
+      }
+    }
+    .next {
+      text-align: right;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+      a {
+        margin-right: 16px;
+        display: block;
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 12px;
+          right: -16px;
+          height: 13px;
+          width: 9px;
+          display: inline-block;
+          background: url("/images/date_arrows.png") no-repeat -9px 0;
+        }
+      }
+    }
+  }
+  #summary {
+    border: 1px solid #c5c5c5;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 1px #c5c5c5;
+    .columns{
+      min-height: 146px;
+      &:first-child{
+        border-right: 1px solid #c5c5c5;
+      }
+      &:last-child{
+        border-left: 1px solid #c5c5c5;
+      }
+      em{
+        font-style: normal;
+        color: #74b62c;
+        font-size: 1.2em;
+      }
+      h3, h4, h5 {
+        font-weight: normal;
+        display: block;
+        margin: 4px 0;
+      }
+      h3{
+        font-size: 1.8em;
+        color: #3c3c3c;
+      }
+      h4{
+        font-size: 1.2em;
+        color: #3c3c3c;
+      }
+      h5 {
+        font-size: 1em;
+        color: #737373;
+      }
+    }
+    .lectures{
+      h3{
+        margin-top: 44px;
+      }
+    }
+    .assigments, .practicies {
+      h3{
+        margin: 55px 0 0;
       }
     }
   }
