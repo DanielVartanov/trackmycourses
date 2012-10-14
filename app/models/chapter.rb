@@ -7,6 +7,6 @@ class Chapter < ActiveRecord::Base
   has_many :assignments
 
   def as_json(options={})
-    super :include => { :course => { :include => :platform } }
+    super include: { course: { include: :platform }, lectures: {}, assignments: {} }
   end
 end
