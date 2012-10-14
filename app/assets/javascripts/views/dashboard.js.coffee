@@ -19,4 +19,6 @@ class TrackMyCourses.Views.DashboardPage extends Backbone.View
 
   weekFetched: (week) ->
     @weekSummaryView.render(week)
+
+    @weekCourses = new TrackMyCourses.Collections.Chapters(week.chapters)
     

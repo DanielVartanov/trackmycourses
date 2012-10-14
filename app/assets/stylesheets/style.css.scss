@@ -683,6 +683,9 @@ div.orbit-wrapper {
           a {
             opacity: 1;
           }
+          .not-supported{
+            opacity: 0.5;
+          }
         }
         &.github {
           a, span {
@@ -829,7 +832,7 @@ div.orbit-wrapper {
     }
     .lectures{
       h3{
-        margin-top: 55px;
+        margin-top: 44px;
       }
     }
     .assigments, .practicies {
@@ -839,14 +842,13 @@ div.orbit-wrapper {
     }
   }
 
-  #courses {
+  #chapters {
     article {
       border: 1px solid #c8c8c8;
       box-shadow: 1px 1px 1px #c8c8c8;
       margin-bottom: 22px;
       background: #f9f9f9;
       position: relative;
-
       &:after {
         content: "";
         position: absolute;
@@ -857,7 +859,6 @@ div.orbit-wrapper {
         background: url("/images/arrows.png") no-repeat 0 -14px;
         cursor: pointer;
       }
-
       &.collapsed {
         max-height: 43px;
         overflow: hidden;

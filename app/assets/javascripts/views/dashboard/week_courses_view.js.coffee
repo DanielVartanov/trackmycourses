@@ -1,5 +1,9 @@
-class TrackMyCourses.Views.WeekCoursesView extends Backbone.View
-  el: '#courses'
+class TrackMyCourses.Views.ChaptersView extends Backbone.View
+  el: '#chapters'
 
   initialize: ->
     _.bindAll @
+
+  render: ->
+    @.$el.html ''
+    @
