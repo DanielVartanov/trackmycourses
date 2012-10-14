@@ -1,3 +1,9 @@
+def change_https_to_http(url)
+  parsed_uri = URI.parse(url)
+  parsed_uri.scheme = 'http'
+  parsed_uri.to_s
+end
+
 platform = Platform[:edx]
 
 grabber = Mechanize.new
@@ -9,7 +15,7 @@ courses.each do |course_xml|
   course = Course.new platform: platform
   course.url = platform.url + course_xml.css('> a').attr('href').value
   course.title = course_xml.css('h2').text
-  course.logo_url = platform.url + course_xml.css('.cover-image > img').attr('src')
+  course.logo_url = change_https_to_http(platform.url) + course_xml.css('.cover-image > img').attr('src')
   course.description = course_xml.css('.desc').text.squish
   course.start_date = Date.parse course_xml.css('.start-date').text
   course.save!

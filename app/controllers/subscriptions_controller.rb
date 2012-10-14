@@ -7,7 +7,13 @@ class SubscriptionsController < ApplicationController
   def index
     respond_to do |format|
       format.html
-      format.json { render :json => session[:course_ids] || [] }
+      format.json { render :json => json }
     end
+  end
+
+  protected
+
+  def json
+    { course_ids: session[:course_ids] || [] }
   end
 end
