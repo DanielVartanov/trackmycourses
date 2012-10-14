@@ -21,6 +21,8 @@ describe DashboardController, :type => :controller do
         response_json["total_practice_count"].should == 11
         response_json["total_assignment_count"].should == 2
 
+        response_json["chapters"].count.should == 2
+        response_json["chapters"][0]["course"].should_not be_nil
       end
     end
 
@@ -39,7 +41,8 @@ describe DashboardController, :type => :controller do
         response_json["total_lecture_count"].should == 0
         response_json["total_practice_count"].should == 0
         response_json["total_assignment_count"].should == 0
-
+        
+        response_json["chapters"].count.should == 0
       end
     end
   end

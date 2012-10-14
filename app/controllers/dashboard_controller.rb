@@ -16,10 +16,13 @@ class DashboardController < ApplicationController
       total_assignment_count = 0
     end
 
+
+
     render json: {
       total_lecture_count: total_lecture_count.to_i,
       total_practice_count: total_practice_count.to_i,
-      total_assignment_count: total_assignment_count.to_i
+      total_assignment_count: total_assignment_count.to_i,
+      chapters: chapters
     }
   end
 end
