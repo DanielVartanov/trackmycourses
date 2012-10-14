@@ -3,11 +3,8 @@ class TrackMyCourses.Collections.Courses extends Backbone.Collection
   model: TrackMyCourses.Models.Course
 
   setSubscription: (subscription) ->
-    @subscription = subscription
     @.each (course) ->
-      if _.include subscription.get('course_ids'), course.id
-        course.set 'subscribed', true
-        course.set 'subscriptionClass', 'subscribed'
+      course.set(_.include subscription.get('course_ids'), course.id)
 
   subscribed: ->
     @.filter (course) ->
