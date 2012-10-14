@@ -12,12 +12,13 @@ class TrackMyCourses.Views.CompositionPage extends Backbone.View
     @subscription.fetch()
 
   subscriptionFetched: (subscription) ->
-    console.log 'oaeuaoeuaoeu'
     @courses.setSubscription(subscription)
     @coursesView = new TrackMyCourses.Views.Courses(collection: @courses).render()
     @subscribedCoursesView = new TrackMyCourses.Views.SubscribedCourses(collection: @courses).render()
 
     @coursesView.onSubscribe = @onSubscribe
+
+    @subscribedCoursesView.onUnsubscribe = @onUnsubscribe
 
   onSubscribe: (course) ->
     course_ids = @subscription.get('course_ids')
@@ -25,6 +26,8 @@ class TrackMyCourses.Views.CompositionPage extends Backbone.View
     
     @subscription.set 'course_ids', course_ids
     @subscription.save()
-    console.log @subscription
+
     @subscribedCoursesView.subscribe(course)
 
+  onUnsubscribe: (course) ->
+    @coursesView.un
