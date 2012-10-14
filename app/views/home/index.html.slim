@@ -8,6 +8,16 @@
 
       .three.columns.sidebar
         = link_to "Start tracking", account_subscriptions_path, class: "bigbutton"
+        #network_accounts_block
+          p
+            | Sign in with 
+            span#network_accounts_trigger network account
+          ul#network_accounts
+            li: a.twitter href="#" title="Sign in with twitter" twitter
+            li: a.google href="#" title="Sign in with google" google
+            li: a.facebook href="#" title="Sign in with facebook" facebook
+            li: a.github href="#" title="Sign in with github" github
+
         ul.platforms
           li: a.edx href="https://www.edx.org/" target="_blank" title="edX" edX 
           li: a.coursera href="https://www.coursera.org/" target="_blank" title="coursera" coursera
