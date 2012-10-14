@@ -3,7 +3,6 @@ class TrackMyCourses.Views.Course extends Backbone.View
   template: JST['course']
 
   render: ->
-    @.$el.data('model', @model)
-    @.$el.addClass @model.get('subscriptionClass')
+    @.$el.data 'view', @
     @.$el.html @template({course: @model})
     this

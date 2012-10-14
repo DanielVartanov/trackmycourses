@@ -12,15 +12,31 @@ class TrackMyCourses.Views.Courses extends Backbone.View
     this
 
   addCourse: (course) ->
-    @.$el.append new TrackMyCourses.Views.Course(model: course).render().el
+    unless course.get('subscribed')
+      @.$el.append new TrackMyCourses.Views.Course(model: course).render().el
 
   subscribeToCourseClicked: (event) ->
     eventElement = $(event.currentTarget)
     modelElement = $(eventElement).closest('li')
 
-    course = modelElement.data('model')
-    @collection.remove course
+    courseView = modelElement.data('view')
+    course = courseView.model
 
-    modelElement.fadeOut()
+    course.set('subscribed', true)
 
-    @onSubscribe(course)
+    courseView.$el.hide 'show', ->
+      courseView.remove()
+
+    course_ids = @subscription.get 'course_ids'
+    course_ids.push course.id
+    course_ids = _.unique(course_ids)
+    
+    @subscription.set 
+      'course_ids': course_ids
+      'lastChangedCourse': course
+
+    @subscription.save()
+
+  updateCourses: (course) ->
+    unless course.get('subscribed') 
+      @addCourse(course)

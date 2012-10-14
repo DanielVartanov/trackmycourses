@@ -4,21 +4,61 @@
       h2 Dashboard
       .row
         .nine.columns 
-          ul.accordion
+          #weeks
+            .row
+              .four.columns.previous
+                a#prev-week
+                  | Previous week
+                  span.date 08.10 - 14.10
+
+              .four.columns.current
+                a#current-week
+                  | This week
+                  span.date 08.10 - 14.10
+
+              .four.columns.next
+                a#next-week
+                  | Next week
+                  span.date 08.10 - 14.10
+
+          #summary
+            .row
+              .four.columns.lectures
+                h3 
+                  em 10
+                  |  lectures
+                h5 (6 hrs. 40 minutes)
+              .four.columns.practicies
+                h3
+                  em 10
+                  |  practicies
+              .four.columns.assigments
+                h3
+                  em 4
+                  |  assigments
+
+          #cources
             - 5.times do |i|
-              li
-                .title
-                  .row
-                    .six.columns
-                      h2 Course #{i+1} title
-                    .five.columns.end
-                      .radius.progress.success
-                        span.meter style="width: #{rand 100}%"
-                .content
-                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              article class="#{i > 1 ? 'edx' : 'coursera' }"
+                h1 Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                .row
+                  .six.columns
+                    .lectures
+                      h2 Lectures
+                      ul
+                        - 2.times do
+                          li 
+                            | Duis aute irure dolor in 
+                            span.info (01:45) Practicies: 2
+
+                  .six.columns
+                    .assigments
+                      h2 Assigments 
+                      ul
+                        li Excepteur sint occaecat
+
         .three.columns.sidebar
-          = link_to "My subscriptions", account_subscriptions_path, class: "bigbutton"
+          = link_to "My courses", account_subscriptions_path, class: "bigbutton back"
           .my-accounts
             .header
               h2 Accounts          
@@ -33,6 +73,6 @@
                 a href="#" Connect
                 a.remove href="#" remove
               li.twitter
-                a href="#" Connect
+                a href="/auth/twitter" Connect
                 a.remove href="#" remove
               li Connect your network account to be able to save and manage your courses
