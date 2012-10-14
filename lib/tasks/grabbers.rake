@@ -22,27 +22,33 @@ namespace :grab do
     grabber.submit(form)
 
     platform.courses.each do |course|
+      puts "Course: #{course.title} #{course.url}"
       course.chapters.each do |chapter|
         chapter.lectures.each do |lecture|
+          puts "  Lecture: #{lecture.title}"
           grabber.get lecture.url
-          video_id = false
 
-          matched_video = grabber.page.search('.seq_contents').text.match(/1\.0:([a-zA-Z0-9-_]{11})/).to_a
-          if matched_video.any?
-            video_id = matched_video[1]
-          else
+          video_ids = []
+          video_ids = grabber.page.search('body').text.scan(/1\.0:([a-zA-Z0-9\-_]{11})/).flatten
+
+          if video_ids.empty?
             node = grabber.page.search('div.video')
             if node.present?
+              debugger
               video_id = node.attr("data-streams").value.split(':').last
             end
           end
 
-          if video_id
+
+          lecture_duration = 0
+          video_ids.each do |video_id|
             doc = Nokogiri::XML open("https://gdata.youtube.com/feeds/api/videos/#{video_id}?v=2")
             doc.remove_namespaces!
-            lecture.duration = doc.xpath("//duration").attr('seconds').value.to_i
-            lecture.save
+            lecture_duration += doc.xpath("//duration").attr('seconds').value.to_i
           end
+          lecture.duration = lecture_duration
+          puts "    Lecture duration: #{lecture.duration}"
+          lecture.save
         end
       end
     end
