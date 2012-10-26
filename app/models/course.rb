@@ -1,5 +1,5 @@
 class Course < ActiveRecord::Base
-  attr_accessible :description, :logo_url, :platform_id, :title, :url, :platform
+  attr_accessible :description, :logo_url, :platform_id, :title, :url, :platform, :start_date
 
   belongs_to :platform
   has_many :chapters

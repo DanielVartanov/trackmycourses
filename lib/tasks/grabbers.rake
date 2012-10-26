@@ -24,7 +24,7 @@ namespace :grab do
     platform.courses.each do |course|
       puts "Course: #{course.title} #{course.url}"
       course.chapters.each do |chapter|
-        chapter.lectures.each do |lecture|
+        chapter.lectures.where(duration: -1).each do |lecture|
           sleep 3
           puts "  Lecture: #{lecture.title}"
           grabber.get lecture.url
@@ -67,13 +67,15 @@ namespace :grab do
     grabber.page.link_with(:text => 'Find Courses').click
     courses = grabber.page.search('article.course')
     courses.each do |course_xml|
-      course = Course.new platform: platform
-      course.url = platform.url + course_xml.css('> a').attr('href').value
-      course.title = course_xml.css('h2').text
-      course.logo_url = change_https_to_http(platform.url) + course_xml.css('.cover-image > img').attr('src')
-      course.description = course_xml.css('.desc').text.squish
-      course.start_date = Date.parse course_xml.css('.start-date').text
-      course.save!
+      course_hash ={}
+      url = platform.url + course_xml.css('> a').attr('href').value
+      course_hash[:title] = course_xml.css('h2').text
+      course_hash[:logo_url] = change_https_to_http(platform.url) + course_xml.css('.cover-image > img').attr('src')
+      course_hash[:description] = course_xml.css('.desc').text.squish
+      course_hash[:start_date] = Date.parse course_xml.css('.start-date').text
+      course_hash[:platform] = platform
+
+      course = Course.find_or_create_by_url url, course_hash
     end
 
     puts "#{Course.count} courses grabbed"
@@ -109,12 +111,10 @@ namespace :grab do
         end
 
         grabber.page.search('ol.chapters > li').each_with_index do |chapter_xml, index|
-          chapter = Chapter.new course: course
-          chapter.title = chapter_xml.css('h2').text.squish
-          chapter.number = index + 1
-          chapter.save
+          chapter_title = chapter_xml.css('h2').text.squish
+          chapter = Chapter.where(course_id: course).find_or_create_by_title chapter_title, number: index + 1
 
-          section = chapter_xml.css('ol.sections > li').each do |section_xml|
+          chapter_xml.css('ol.sections > li').each do |section_xml|
             section_url = change_https_to_http(platform.url) + section_xml.css('h3 > a').attr('href').value
             section_title = section_xml.css('h3 > a').text.squish
             exercise_count_matched = section_xml.css('h3 > span').text.match(/\/(\d+)/).to_a
@@ -130,21 +130,21 @@ namespace :grab do
             end
 
             if section_due_date.blank?
-              section = Lecture.new practice_count: section_practice_count,
-                                    duration: section_duration,
-                                    title: section_title,
-                                    url: section_url,
-                                    score_count: section_score_count,
-                                    chapter: chapter
+              Lecture.find_or_create_by_url section_url,
+                practice_count: section_practice_count,
+                duration: section_duration,
+                title: section_title,
+                score_count: section_score_count,
+                chapter: chapter,
+                duration: -1
 
             else
-              section = Assignment.new due_date: section_due_date,
-                                       title: section_title,
-                                       url: section_url,
-                                       chapter: chapter
+              Assignment.find_or_create_by_url section_url, 
+                due_date: section_due_date,
+                title: section_title,
+                chapter: chapter
             end
 
-            section.save!
           end
         end
       end
