@@ -9,6 +9,7 @@ gem 'jbuilder'
 gem 'mechanize'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
+gem 'thin'
 
 group :development do
   gem 'nokogiri-pretty'
@@ -18,7 +19,6 @@ group :development do
   gem 'capistrano'
   gem 'rvm-capistrano'
   gem 'capistrano-unicorn'
-  gem 'thin'
 end
 
 group :test do
@@ -31,8 +31,6 @@ group :test, :development do
 end
 
 group :production do
-  # Use unicorn as the app server
-  gem 'unicorn'
   gem 'pg'
 end
 
