@@ -14,6 +14,6 @@ class Platform < ActiveRecord::Base
   protected
 
   def self.config
-    @config ||= YAML.load_file(Rails.root.join('config', 'platforms.yml'))
+    @config ||= YAML::load(ERB.new(File.read(File.join(Rails.root, 'config', 'platforms.yml'))).result)[Rails.env]
   end
 end
