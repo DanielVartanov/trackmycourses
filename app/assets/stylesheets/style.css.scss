@@ -135,6 +135,7 @@ footer {
           height: 34px;
           width: 34px;
           text-indent: -9999px;
+          opacity: 0.8;
           &.twitter {
             background: url("/images/network_accounts.png") no-repeat 0 0;
           }
@@ -147,6 +148,9 @@ footer {
           &.github {
             width: 76px;
             background: url("/images/network_accounts.png") no-repeat -170px 0;
+          }
+          &:hover {
+            opacity: 1;
           }
         }
         &:first-child {
