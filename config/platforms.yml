@@ -1,0 +1,10 @@
+development:
+  edx:
+    email: 'kalys+trackmycourses@osmonov.com'
+    password: 'aoeuaoeu'
+
+production: 
+  edx:
+    email: <%= ENV['EDX_EMAIL'] %>
+    password: <%= ENV['EDX_PASSWORD'] %> 
+  
