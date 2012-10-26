@@ -29,3 +29,6 @@ class TrackMyCourses.Views.HomePage extends Backbone.View
       $("#network_accounts_trigger").parent().removeClass "active"
       $("#network_accounts").removeClass "active"
 
+    preloadImage = new Image()
+    preloadImage.src = "/images/network_accounts.png"
+
