@@ -155,6 +155,15 @@ namespace :grab do
   end
 end
 
+namespace :courses do
+  desc "Updates course data"
+  task update: :environment do
+    Rake::Task['grab:courses'].execute
+    Rake::Task['grab:internals'].execute
+    Rake::Task['grab:video'].execute
+  end
+end
+
 namespace :db do
   desc 'Recreate database and populate with course info'
   task :populate do
