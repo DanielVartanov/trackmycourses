@@ -15,6 +15,7 @@ group :development do
   gem 'nokogiri-pretty'
   gem 'hirb'
   gem 'sqlite3'
+
   # Deploy with Capistrano
   gem 'capistrano'
   gem 'rvm-capistrano'
@@ -27,7 +28,7 @@ group :test do
 end
 
 group :test, :development do
-  gem 'debugger'
+  gem 'pry-debugger'
 end
 
 group :production do
