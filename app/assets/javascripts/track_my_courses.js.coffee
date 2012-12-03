@@ -5,7 +5,7 @@ window.TrackMyCourses =
   Routers: {}
 
   init: ->
-    views = 
+    views =
       '/': TrackMyCourses.Views.HomePage
       '/account/subscriptions': TrackMyCourses.Views.CompositionPage
       '/dashboard': TrackMyCourses.Views.DashboardPage

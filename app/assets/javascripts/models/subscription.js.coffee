@@ -1,2 +1,2 @@
 class TrackMyCourses.Models.Subscription extends Backbone.Model
-  url: '/account/subscriptions'
+  url: '/account/subscriptions.json'
